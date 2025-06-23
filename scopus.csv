@@ -1,0 +1,356 @@
+﻿Title,Anno,RQ,Descrizione abstract,Metodo,Tipo di dati,Tecnica per missing,Tecnica per eterogeneità,Risultati principali,Review Status,Link
+https://www.scopus.com/pages/publications/105003216960,2025,"RQ1, RQ2, RQ3, RQ4","Il forecasting di serie temporali multivariate mira a prevedere accuratamente l'andamento futuro dei dati analizzando le diverse caratteristiche delle serie. Tuttavia, nella pratica è spesso difficile ottenere un numero sufficiente di dati etichettati di alta qualità, ostacolando la capacità del modello di generalizzare. Per affrontare questo problema, gli autori propongono un algoritmo che combina tecniche di time-frequency mining e regularizzazione della consistenza. In particolare:
+1. Ampliano i dati tramite perturbazioni deboli per generare una varietà maggiore di esempi di training.
+2. Applicano una regularizzazione sulla consistenza per garantire che il modello produca previsioni stabili anche a fronte di leggere variazioni negli input.
+3. Usano due estrattori di dipendenze complementari per catturare in modo adattivo le interazioni tra variabili su più livelli di frequenze.
+Infine, validano il metodo su cinque dataset reali, mostrando che il modello proposto ottiene prestazioni superiori rispetto ai metodi esistenti.",,,,,,,
+https://www.scopus.com/pages/publications/85215351023,2025,"RQ1, RQ2, RQ3, RQ4","I modelli basati su Transformer per il forecasting di serie temporali hanno ottenuto buoni risultati, e negli ultimi anni sono stati proposte diverse varianti. Tuttavia, molti di questi modelli rappresentano la serie temporale a una singola scala temporale, il che rende difficile catturare granularità temporali diverse o le correlazioni tra più serie, compromettendo la precisione delle previsioni.
+In questo lavoro, gli autori propongono MultiPatchFormer, un nuovo modello Transformer che integra:
+1. Modellazione temporale multi-scala, in cui la serie viene suddivisa in “patches” a diverse risoluzioni per cogliere correlazioni temporali su più scale.
+2. Encoder “channel-wise”, che modella le relazioni tra le varie serie in input, catturando le interazioni complesse tra canali.
+3. Un decodificatore lineare multi-step, progettato per migliorare la generalizzazione e ridurre l’overfitting e il rumore.
+Il modello è stato validato su sette dataset reali, dimostrando di superare i modelli di riferimento esistenti in termini di metriche di errore e generalizzazione.",,,,,,,
+https://www.scopus.com/pages/publications/105004439982,2025,"RQ1, RQ2, RQ3, RQ4","Le Electronic Health Records (EHRs) rappresentano un archivio completo di dati sanitari multimodali dei pazienti, che combinano attributi statici (come dati demografici) con serie temporali multivariate (MTS) dinamiche e irregolari, di lunghezza variabile. Queste serie temporali offrono preziose informazioni per le previsioni cliniche, e la loro integrazione con dati statici consente una comprensione più profonda dei percorsi di salute dei pazienti.
+Le Deep Neural Networks (DNNs) sono efficaci nell’analizzare pattern complessi nei dati sanitari multimodali, ma la loro applicazione clinica è limitata dalla scarsa interpretabilità. Per affrontare questa criticità, lo studio propone architetture DNN interpretabili per prevedere e comprendere l’insorgenza della Multiresistenza agli Antibiotici (MDR) nei reparti di terapia intensiva (ICU). I modelli integrano dati demografici statici e variabili temporali, offrendo una visione olistica dei pazienti.
+La metodologia introduce:
+• Tecniche di selezione delle feature
+• Meccanismi di attenzione
+• Strumenti di explainability post-hoc
+Questa combinazione riduce la ridondanza delle feature e identifica i fattori di rischio chiave, migliorando l’accuratezza e la robustezza del modello. I risultati mostrano un AUC ROC di 76.90 ± 3.10, significativamente migliore rispetto ai baseline. Inoltre, il framework è scalabile e applicabile ad altri scenari clinici basati su dati EHR, supportando decisioni mediche tempestive ed evidence-based.",,,,,,,
+UniLF: A novel short-term load forecasting model uniformly considering various features from multivariate load data,2025,"RQ1, RQ2, RQ3, RQ4","Una previsione accurata del carico elettrico a breve termine (STLF) è fondamentale per garantire il funzionamento economico e stabile dei sistemi elettrici. Nonostante i progressi ottenuti con metodi di deep learning, molti modelli attuali analizzano i dati di carico solo da una prospettiva limitata, senza sfruttare in modo integrato tre caratteristiche chiave dei dati multivariati:
+1. L’influenza delle covariate
+2. Le caratteristiche multi-scala
+3. Le variazioni locali e globali
+La mancata estrazione congiunta di queste informazioni ostacola il miglioramento della precisione predittiva.
+Per risolvere questo problema, gli autori propongono UniLF, un nuovo modello basato su Transformer, che introduce:
+• Un embedding con fusione potenziata da convoluzioni, per catturare le correlazioni tra carico e covariate;
+• Un blocco di ricostruzione e decomposizione delle feature, per estrarre pattern multi-scala e variazioni locali/globali da una rappresentazione 2D;
+• Un meccanismo di self-attention multiscala guidato da maschere, per potenziare le interazioni tra scale e nel tempo.
+Esperimenti su tre dataset reali (Australia, Panama e Austria) mostrano che UniLF raggiunge prestazioni superiori rispetto ai baseline, anche su differenti orizzonti temporali di previsione, mantenendo un'efficienza pratica competitiva.",,,,,,,
+https://www.scopus.com/pages/publications/85218678846,2025,"RQ1, RQ2, RQ3, RQ4","Le criptovalute rappresentano un’innovazione finanziaria di grande impatto, che ha modificato profondamente il sistema finanziario. Tuttavia, le loro interazioni sempre più complesse con i mercati finanziari tradizionali rendono difficile prevederne la volatilità. Per affrontare questa sfida, gli autori propongono un nuovo framework basato su una Rete Neurale Grafica Multiscala e Dinamica (EMGNN – Evolving Multiscale Graph Neural Network).
+In particolare:
+• Viene costruito un grafo che rappresenta le interazioni tra criptovalute e mercati finanziari convenzionali, integrato nel processo predittivo.
+• Si utilizzano strutture gerarchiche dinamiche per modellare le interazioni temporali e multiscala.
+• Viene valutata anche la robustezza e l’interpretabilità del modello, analizzando le strutture di grafo apprese.
+I risultati sperimentali dimostrano che:
+1. La volatilità delle criptovalute è legata ai mercati tradizionali, e il grafo integrato migliora la previsione.
+2. Il modello EMGNN offre prestazioni eccellenti e robuste su vari indicatori di volatilità, criptovalute diverse, orizzonti previsionali ed error metrics.
+3. Le strutture di grafo evolvono nel tempo e su più scale, e il framework le cattura efficacemente.
+Questo lavoro fornisce nuove prospettive per la gestione del rischio e per la formulazione di politiche finanziarie.",,,,,,,
+https://www.scopus.com/pages/publications/105003254263,2025,"RQ1, RQ2, RQ3, RQ4","Migliorare la precisione del forecasting a lungo termine delle serie temporali è una sfida fondamentale in molti settori. Negli ultimi anni, diversi studi hanno impiegato la Trasformata di Fourier Discreta (DFT) per trasformare le serie temporali nel dominio delle frequenze, in quanto consente una rappresentazione compatta ed efficiente, utile per cogliere pattern ciclici profondi e trend globali difficili da rilevare nel dominio temporale.
+Tuttavia, l'informazione nel dominio delle frequenze è ancora sottoutilizzata, a causa di tre limiti principali:
+1. L’uso di DFT a risoluzione fissa, che vincola l’analisi a una singola scala di frequenze, comportando la perdita di informazioni rilevanti.
+2. L’attenzione quasi esclusiva alle dipendenze globali, trascurando i dettagli temporali locali.
+3. L’alta sensibilità al rumore, che riduce la capacità del modello di cogliere pattern stabili.
+Per affrontare questi problemi, gli autori propongono FreMixer, una nuova architettura leggera e interamente operante nel dominio delle frequenze, con tre principali contributi:
+• Segmentazione multi-risoluzione nel dominio delle frequenze, per combinare informazioni a scale diverse e superare i limiti della DFT classica.
+• Architettura a doppio ramo, che cattura simultaneamente feature globali e locali a ogni risoluzione, per una rappresentazione più ricca dei pattern temporali.
+• Una nuova funzione di perdita “ArcTanLoss”, meno sensibile al rumore e agli outlier, che migliora la generalizzazione.
+Esperimenti su sette dataset diversi confermano l’efficacia del modello e della funzione di perdita proposti.",,,,,,,
+https://www.scopus.com/pages/publications/105007019938,2025,"RQ1, RQ2, RQ3, RQ4","Attualmente i modelli basati su Transformer dominano la classificazione delle serie temporali, grazie alla loro capacità di catturare dipendenze globali nei dati. Tuttavia, questi modelli sono noti per l’elevato consumo di memoria e costi computazionali, che li rendono poco adatti per serie temporali multivariate lunghe. Al contrario, i modelli basati su convoluzioni offrono un miglior compromesso tra prestazioni e efficienza, ma sono stati poco esplorati a causa del predominio dei Transformer.
+Per colmare questa lacuna, gli autori propongono HDTCNet, un modello puramente convoluzionale che alterna convoluzioni 1D e 2D per catturare le correlazioni temporali tra variazioni intra- e inter-sensore. I principali contributi sono:
+1. Wavelet Time Convolution block – Espande il campo ricettivo con kernel convoluzionali 1D inseriti tra una decomposizione e ricostruzione wavelet, migliorando l’analisi temporale fine con basse risorse.
+2. Hierarchical Difference Convolution – Cattura gradienti intra- e inter-sensore, modellando le variazioni locali dei segnali.
+3. Modulo di auto-miglioramento (self-enhancing) – Raffina la rappresentazione delle feature dei sensori tramite una multi-view self-enhancement.
+Queste innovazioni permettono a HDTCNet di ottenere prestazioni superiori rispetto ai modelli esistenti, con maggiore efficienza. I risultati sperimentali mostrano un miglioramento di:
+• +2,1% in accuratezza e +1% in F1-score su 25 dataset UEA per la classificazione,
+• Ottimi risultati anche su 3 dataset di anomaly detection,
+• Con una riduzione dei parametri di due ordini di grandezza.",,,,,,,
+Multi-relational mixed perception based short time series prediction of Alzheimer’s disease progression,2025,"RQ1, RQ2, RQ4","L’Alzheimer (AD) è una malattia neurodegenerativa irreversibile e a lungo decorso, per la quale la diagnosi precoce e l’intervento tempestivo sono fondamentali. Tuttavia, i modelli deep learning esistenti per l’analisi dei dati longitudinali sull’AD sono in genere basati su serie temporali lunghe, rendendoli inadatti a situazioni cliniche reali dove i dati sono spesso brevi e raccolti a intervalli irregolari.
+In questo studio, gli autori propongono il modello MMPSTS (Multi-relational Mixed Perception based Short Time Series) per la previsione della progressione dell’Alzheimer, con i seguenti contributi principali:
+1. Rete generativa avversaria evolutiva temporale (Time Series Evolutionary GAN): migliora la capacità del modello di adattarsi all’evoluzione dei dati nel tempo e generalizza i modelli addestrati su serie lunghe verso dati a serie brevi.
+2. Modulo di percezione mista multi-relazionale con filtraggio del rumore: cattura sia relazioni tra coppie di soggetti che relazioni ad ordine superiore, costruendo un grafo di popolazione con filtraggio del rumore e un iper-grafo.
+3. Le rappresentazioni congiunte delle relazioni sono poi fornite a una LSTM estesa, per modellare la distribuzione della serie temporale nel contesto clinico.
+Il metodo è stato confrontato con altri modelli SOTA su compiti di diagnosi clinica e previsione dei punteggi cognitivi, mostrando risultati superiori. Inoltre, è stata effettuata anche una valutazione patologica per verificare la plausibilità biologica dei risultati ottenuti.",,,,,,,
+Deep representation learning enables cross-basin water quality prediction under data-scarce conditions,2025,"RQ1, RQ2, RQ3, RQ4","L’intelligenza artificiale è sempre più impiegata per prevedere la qualità dell’acqua superficiale, al fine di monitorare in modo proattivo la salute degli ecosistemi acquatici. Tuttavia, la previsione della qualità dell’acqua in condizioni di scarsità di dati è particolarmente complessa, specialmente quando i dati provengono da siti di monitoraggio eterogenei, con scarsa somiglianza tra loro, il che limita il trasferimento di informazioni.
+Per affrontare questo problema, gli autori propongono un modello deep learning basato su:
+• Representation learning per apprendere conoscenze da bacini fluviali sorgente nella fase di pre-training;
+• Integrazione dei dati meteorologici per migliorare la previsione.
+Il modello è stato validato con successo su dati provenienti da 149 siti di monitoraggio in tutta la Cina interna. I risultati mostrano:
+• Elevata accuratezza predittiva su tutti i siti, con un valore medio di efficienza di Nash-Sutcliffe (NSE) pari a 0.80;
+• Ottime prestazioni anche su previsioni multi-indicatore;
+• Mantenimento delle prestazioni anche con metà dei dati grazie al pre-training, che consente una predizione efficace anche in scenari con pochi dati.
+Questo approccio si dimostra promettente per la previsione della qualità dell’acqua a livello inter-bacino, contribuendo allo sviluppo della gestione ambientale dei sistemi idrici.",,,,,,,
+Time-intervals-related pattern selection for continuous event prediction,2025,"RQ1, RQ2, RQ3, RQ4","I Symbolic Time Intervals (STI) sono utilizzati in vari ambiti per rappresentare eventi reali di durata variabile, come la durata di un semaforo o i cicli di trattamento medico. I dati temporali multivariati possono contenere STI, eventi puntuali (es. incidenti stradali) o misurazioni manuali (es. esami del sangue), risultando altamente eterogenei.
+Questo studio propone un approccio di astrazione temporale, che rappresenta in modo uniforme questi diversi tipi di dati temporali multivariati utilizzando gli STI, al fine di sviluppare un modello per la previsione continua di eventi di interesse.
+I principali contributi sono:
+1. Uso di TIRPs (Time Interval Related Patterns) che terminano con un evento di interesse, per abilitare una previsione continua.
+2. Utilizzo simultaneo di predittori di completamento per diverse istanze di TIRP.
+3. Introduzione di nuove metriche discriminative di selezione dei pattern, basate su differenze di frequenze o durate tra i soggetti che presentano o meno l’evento.
+I metodi proposti hanno ottenuto un miglioramento medio del 5% in AUROC rispetto a LSTM-FCN, il miglior baseline tra i confrontati (RawXGB, ResNet, LSTM-FCN e ROCKET), testati su dataset medici e non medici.
+Il metodo ha un forte potenziale di applicazione reale e in tempo reale in contesti con dati temporali multivariati ed eterogenei, ad esempio per la previsione precoce di attacchi di panico tramite wearable o complicazioni in terapia intensiva.",,,,,,,
+RNN and GNN based prediction of agricultural prices with multivariate time series and its short-term fluctuations smoothing effect,2025,"RQ1, RQ2, RQ3, RQ4","Questo studio esplora l’utilizzo di metodi di machine learning per la previsione dei prezzi delle materie prime agricole. Poiché i fattori ambientali come il meteo influenzano fortemente le variazioni di prezzo, è stato costruito un dataset multivariato di serie temporali che combina:
+• I prezzi all’ingrosso di quattro materie prime agricole in Corea del Sud,
+• Sei variabili meteorologiche,
+• I numeri delle settimane.
+Sono stati adottati due approcci principali:
+1. Un modello RNN basato su stacked LSTM,
+2. Due modelli basati su GNN: StemGNN (Spectral Temporal Graph Neural Network) e Temporal Graph Convolutional Network.
+Inoltre, è stato impiegato un modello univariato di controllo, per confrontare l’efficacia dell’approccio multivariato.
+È stata analizzata anche l’influenza della finestra di smoothing temporale, applicando cinque diverse lunghezze, per attenuare le fluttuazioni a breve termine e valutarne l’impatto sulle prestazioni predittive.
+I risultati mostrano che:
+• La riduzione delle fluttuazioni a breve termine migliora maggiormente le performance dei modelli multivariati rispetto a quello univariato.
+• I modelli GNN superano quelli RNN in termini di accuratezza.
+• L’analisi delle matrici di adiacenza nel meccanismo di self-attention di StemGNN ha permesso di identificare le variabili meteorologiche più influenti sui prezzi.",,,,,,,
+DPEM: Dual-Perspective Enhanced Mamba for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","Il forecasting di serie temporali multivariate (MTSF) mira a scoprire pattern nascosti nei dati storici per prevedere stati futuri. Tuttavia, nella pratica, le serie temporali multivariate presentano:
+• Pattern periodici eterogenei lungo l’asse temporale,
+• Dipendenze spaziali complesse tra variabili, lungo l’asse delle feature.
+Nonostante i recenti progressi, catturare esplicitamente la dipendenza spaziotemporale in presenza di eterogeneità resta una sfida aperta.
+Per affrontare questo problema, gli autori propongono un nuovo framework chiamato DPEM (Dual-Perspective Enhanced Mamba), basato su architettura Mamba. Le componenti chiave sono:
+1. Multi-Scale Convolution Mamba (MSCM) – Cattura pattern periodici complessi da una prospettiva Channel-Dependent (dipendente dalla variabile).
+2. Adaptive Graph Convolution Mamba (AGCM) – Modella le dipendenze spaziali tra variabili da una prospettiva Channel-Independent.
+3. Un meccanismo di cross-attention multi-testa, che integra le informazioni temporali e spaziali catturate da entrambe le prospettive, favorendo interazioni bidirezionali tra tempo e variabili.
+Esperimenti su 8 benchmark dataset mostrano che DPEM:
+• Ottiene prestazioni SOTA,
+• Riduce i costi computazionali grazie all’uso della Mamba come rete di base.",,,,,,,
+You only adapt once: An adaptive transformer for dynamic multivariate time series forecasting across time-varying topologies and multi-patterns,2025,"RQ1, RQ2, RQ3, RQ4","Sebbene il deep learning si sia dimostrato efficace nel catturare pattern spaziotemporali nei dati di serie temporali multivariate (MTS), la dinamicità nelle topologie delle reti di sensori pone sfide significative, tra cui:
+• Adattamento a topologie variabili,
+• Gestione dei dati mancanti,
+• Mantenimento delle dipendenze spaziali.
+I metodi esistenti, come il retraining dei modelli, sono costosi e lenti, e poco robusti in contesti urbani dinamici.
+Per affrontare questi limiti, gli autori propongono il modello YOAO (You Only Adapt Once), con tre componenti chiave:
+1. Encoder MTS dinamico a livello di nodo, capace di gestire input a dimensioni variabili, adattandosi a topologie mutevoli e dati severamente mancanti.
+2. Decoder multi-scala auto-adattivo, che astrarre i pattern spaziotemporali a più scale, integrando rappresentazioni dettagliate.
+3. Node-wise curriculum learning, per migliorare efficienza e performance durante il training.
+Esperimenti su 3 dataset reali e 2 sottotask simulanti topologie variabili nel tempo dimostrano che:
+• YOAO supera 7 baseline SOTA con un miglioramento medio del +18,75% in accuratezza;
+• Riduce il tempo di training del 41,52% rispetto a 5 modelli basati su Transformer",,,,,,,
+VSC-Net: Versatile spatiotemporal convolution network with multi-sensor signals for remaining useful life prediction of mechanical systems,2025,"RQ1, RQ2, RQ3, RQ4","La previsione della Remaining Useful Life (RUL) è fondamentale per ridurre la manutenzione imprevista e aumentare l'affidabilità dei sistemi meccanici. Tuttavia, gli approcci attuali presentano due limiti principali:
+1. Trascurano le dipendenze spaziali tra variabili sensoriali durante la rilevazione del primo tempo di previsione (FPT).
+2. Non riescono a cogliere le caratteristiche temporali locali associate al comportamento di degrado, riducendo la precisione della previsione.
+Per colmare queste lacune, gli autori propongono VSC-Net (Versatile Spatiotemporal Convolution Network), un nuovo modello per la previsione della RUL basato su segnali multisensore, con tre componenti principali:
+1. Un modulo dual graph attention che estrae feature spaziali e temporali da dati strutturati come grafi, utile per identificare precocemente l’FPT.
+2. Una rete di convoluzione grafica multiscala, in grado di cogliere:
+    ◦ Interdipendenze tra sensori
+    ◦ Dipendenze temporali globali
+    ◦ Pattern locali di degrado
+3. Validazione su:
+    ◦ Dataset N-CMAPSS
+    ◦ Un robot industriale costruito ad hoc
+    ◦ Un sistema ad albero propulsivo
+I risultati sperimentali dimostrano che VSC-Net supera molti modelli SOTA nei compiti di previsione della RUL.",,,,,,,
+A hierarchical multi-stage fusion deep learning framework for short-term wind power prediction,2025,"RQ1, RQ2, RQ3, RQ4","I sistemi SCADA contengono una grande quantità di informazioni con diversa rilevanza fisica, classificabili in dati omogenei e eterogenei. Le differenze e complementarità tra questi tipi di dati sono fondamentali per migliorare la previsione a breve termine della produzione eolica.
+Questo studio propone un’architettura deep learning con un meccanismo di fusione informativa multi-stadio, articolato come segue:
+1. Il primo modulo di fusione analizza le correlazioni interne nei dati omogenei, estraendo pattern dai dati storici.
+2. Il secondo modulo di fusione si concentra sulle differenze nei dati eterogenei, modellando le interazioni spaziali e temporali tra variabili di diversa natura fisica.
+Questa strategia multilivello e multidimensionale di fusione informativa migliora la comprensione delle relazioni interne nei dati e potenzia la precisione delle previsioni.
+Il modello utilizza infine una Bidirectional LSTM per effettuare previsioni accurate e in tempo reale sulla produzione eolica.
+Tre esperimenti condotti su dati reali SCADA da impianti eolici dimostrano che:
+• Il metodo supera 12 modelli avanzati esistenti sia nelle previsioni a singolo passo che multi-step,
+• Offre un notevole miglioramento dell’accuratezza e un supporto decisionale efficace per gestione e manutenzione degli impianti eolici.",,,,,,,
+Transfer Learning with Foundational Models for Time Series Forecasting using Low-Rank Adaptations,2025,"RQ1, RQ2, RQ3, RQ4","I modelli fondazionali (Foundational Models) rappresentano una delle tecniche più promettenti e diffuse nell’ambito dell’Intelligenza Artificiale Generativa. Questi modelli si distinguono per:
+• Scalabilità,
+• Facilità di adattamento tramite Transfer Learning,
+• Elevata capacità di generalizzazione, grazie all’uso di grandi quantità di dati eterogenei durante il pretraining.
+Questa ricerca propone la metodologia LLIAM, un adattamento diretto dei Large Language Models (LLM) al compito di Time Series Forecasting. LLIAM utilizza:
+• Un schema di prompting adatto alle serie temporali,
+• Tecniche di Low-Rank Adaptation (LoRA) per il fine-tuning con dataset temporali eterogenei.
+Lo studio sperimentale si articola in due fasi:
+1. Confronto delle prestazioni tra LLIAM e modelli deep learning SOTA, come RNN, Temporal Convolutional Networks e il metodo TimeLLM.
+2. Una valutazione in zero-shot, per analizzare la capacità di generalizzazione su dataset temporali di domini mai visti durante il training.
+I risultati mostrano che LLIAM è efficace, ottenendo prestazioni competitive senza la necessità di modifiche complesse. Il lavoro promuove l’utilizzo di modelli pre-addestrati e tecniche di fine-tuning efficienti, in linea con i principi della Green AI (riduzione del costo computazionale).",,,,,,,
+Graph signal processing meets machine learning: Multi-scale spatial-temporal ensemble learning methodology for air quality forecasting,2025,"RQ1, RQ2, RQ3, RQ4","La previsione affidabile della qualità dell’aria è un compito complesso, poiché richiede la considerazione di pattern sia temporali che spaziali. Seguendo la filosofia del framework “decomposition and ensemble”, questo studio propone una nuova metodologia di ensemble learning spazio-temporale multiscala, basata sulla Time-Varying Graph Mode Decomposition (TVGMD) e tecniche di Machine Learning (ML).
+La metodologia si articola in quattro fasi principali:
+1. Decomposizione spazio-temporale tramite TVGMD, che rappresenta le serie temporali di qualità dell’aria come grafi variabili nel tempo, estraendo modi oscillatori e le loro strutture di connettività.
+2. Selezione delle feature tramite connettività funzionale.
+3. Previsione dei singoli modi usando tecniche di machine learning.
+4. Combinazione delle previsioni tramite somma semplice (ensemble).
+La novità principale risiede nell’uso di TVGMD, che consente di:
+• Modellare le serie temporali come grafi dinamici,
+• Catturare dipendenze spaziotemporali tra le stazioni di monitoraggio a più scale temporali.
+La metodologia è stata testata su un dataset di concentrazione oraria di PM2.5 proveniente da 36 stazioni di monitoraggio a Pechino. I risultati mostrano che il metodo proposto supera altri metodi comparabili, offrendo una nuova prospettiva per l’analisi e la previsione multiscala della qualità dell’aria.",,,,,,,
+Robust temporal alignment for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","Nel forecasting di serie temporali multivariate, un corretto allineamento temporale è fondamentale. Infatti, disallineamenti temporali possono introdurre casualità nelle relazioni quantitative apprese tra la serie target e le serie di fattori correlate, compromettendo l’affidabilità delle previsioni.
+Tuttavia, due ostacoli principali rendono difficile l’allineamento:
+1. L’Anomalous Information Gain (AIG), ovvero guadagni informativi spurii non rappresentativi.
+2. La presenza di outlier nei dati.
+Per affrontare questi problemi, lo studio propone una metodologia basata su:
+• Un ellissoide legato al ritardo temporale, utilizzato per costruire una metrica di deviazione dell’allineamento.
+• Un termine di regolarizzazione basato sull'information gain, che penalizza i guadagni informativi anomali (AIG).
+• Un filtro per outlier basato su ellissoidi equiprobabili, per migliorare l’affidabilità dei dati in ingresso.
+Sulla base di questi elementi, viene sviluppato un metodo di stima del ritardo temporale (TDE) robusto a AIG e outlier, utilizzato per l’allineamento temporale delle serie.
+Esperimenti su dati simulati e reali (tra cui previsioni di velocità del vento) dimostrano che, dopo l’allineamento con il metodo proposto:
+• Gli errori di previsione (espressi come MSE) si riducono significativamente,
+• In particolare, il MSE è ridotto di almeno il 74% nei modelli ML tradizionali e 95% nei modelli deep learning.",,,,,,,
+Hierarchical temporal-modal synchronous fusion framework for tool wear recognition with multimodal monitoring data integrating uncertainty quantification,2025,"RQ1, RQ2, RQ3, RQ4","Il riconoscimento dell’usura degli utensili è cruciale per migliorare le prestazioni e la sicurezza nei sistemi di produzione avanzata, supportando la pianificazione della manutenzione predittiva. Le tecniche basate sul deep learning (DL) possono associare segnali multimodali allo stato di usura in tempo reale, ma presentano due limiti principali:
+1. Faticano a catturare le correlazioni temporali variabili tra le modalità sensoriali.
+2. Producono stime deterministiche singole, che sono poco affidabili per prendere decisioni manutentive robuste.
+Per superare questi limiti, il lavoro propone HTMSFF (Hierarchical Temporal-Modal Synchronous Fusion Framework), un framework per il riconoscimento dell’usura degli utensili con consapevolezza dell'incertezza, basato su dati multimodali. I componenti principali sono:
+1. MRDAN (Multi-Resolution Directional Attention Network) – Estrae feature dalla coarse-to-fine scale e cattura l’interattività direzionale intra-modale, adattandosi alle variazioni temporali delle sensibilità direzionali.
+2. GFCN (Graph Fourier Convolution Network) – Applica convoluzioni multi-ordine auto-adattive per unire le informazioni temporali e modali, gestendo le interazioni inter-modali.
+3. Quantificazione dell’incertezza – Si ottiene modellando una densità probabilistica dello stato di usura con una distribuzione Student-t inferita ad alto ordine, che produce stime affidabili e interpretabili.
+I risultati sperimentali sul riconoscimento dell’usura mostrano che HTMSFF raggiunge una precisione superiore e fornisce una valutazione efficace dell’incertezza delle previsioni.",,,,,,,
+DFGCN: Decoupled dual-flow dynamic graph convolutional network for multivariate time series forecasting,2025,"RQ1, RQ2, RQ4","Il forecasting di serie temporali multivariate (MTSF) è fondamentale in numerosi ambiti, come la previsione climatica, l’analisi finanziaria e la gestione energetica. Questi dati presentano dipendenze intra-serie (nel tempo) e inter-serie (tra variabili), che generano relazioni complesse e intrecciate.
+La maggior parte dei metodi attuali utilizza strutture a singolo flusso, tentando di apprendere congiuntamente le feature temporali e quelle tra variabili. Tuttavia, questo approccio è vulnerabile a interferenze nel processo di apprendimento, a causa delle dipendenze eterogenee tra le due dimensioni.
+Per superare questo problema, gli autori propongono DFGCN (Dual-Flow dynamic Graph Convolutional Network), che decoppia l’apprendimento delle feature temporali e variabili, modellandole separatamente.
+Le componenti principali del modello sono:
+1. Dual-flow embedding layer – rappresenta separatamente le caratteristiche della dimensione temporale e di quella delle variabili.
+2. Dual-flow dynamic sparse GCN – incorpora la correlazione di Pearson per apprendere dipendenze dinamiche intra- e inter-serie, riducendo il costo computazionale.
+3. Dual-flow global attention layer – apprende separatamente le informazioni globali dalle due dimensioni, migliorando la modellazione di feature locali e globali.
+I risultati su diversi dataset reali mostrano che DFGCN supera i modelli baseline, con miglioramenti tra il 2,40% e il 19,84%. Inoltre, esperimenti di ablation confermano la robustezza del modello e l’efficacia dei suoi componenti.",,,,,,,
+MTHetGNN: A heterogeneous graph embedding framework for multivariate time series forecasting,2022,"RQ1, RQ2, RQ3, RQ4","La previsione di serie temporali multivariate (MTS) consente di analizzare i dati storici per prevedere trend futuri, offrendo un valido supporto alle decisioni. Tuttavia, le relazioni complesse tra variabili — che possono essere statiche, dinamiche, prevedibili o latenti — pongono grandi sfide nella modellazione, ma al tempo stesso offrono ricchezza informativa da sfruttare.
+I metodi esistenti tendono a modellare solo alcune di queste relazioni. Per affrontare queste limitazioni, gli autori propongono un nuovo modello end-to-end di deep learning chiamato MTHetGNN (Multivariate Time Series Forecasting via Heterogeneous Graph Neural Networks).
+I componenti principali del modello sono:
+1. Modulo di embedding delle relazioni: ogni variabile è rappresentata come un nodo in un grafo eterogeneo, dove ogni tipo di arco codifica una relazione diversa (statica o dinamica).
+2. Modulo di embedding temporale: estrae feature dalle serie temporali usando filtri CNN a scale percettive diverse, per catturare pattern di varia complessità temporale.
+3. Modulo di embedding del grafo eterogeneo: elabora l’informazione strutturale complessa generata dai due moduli precedenti.
+Il modello è stato testato su tre dataset reali benchmark, e gli esperimenti mostrano prestazioni superiori rispetto ai metodi SOTA nella previsione di serie temporali multivariate.",,,,,,,
+Multivariate time series forecasting method based on nonlinear spiking neural P systems and non-subsampled shearlet transform,2022,"RQ1, RQ2, RQ3, RQ4","La previsione di serie temporali multivariate (MTSF) è un compito complesso a causa delle loro caratteristiche non lineari, non stazionarie, ad alta dimensionalità, e della presenza di dipendenze spazio-temporali tra le variabili.
+Per affrontare queste sfide, gli autori propongono un nuovo metodo di previsione basato su:
+• Sistemi neurali a spike non lineari P (NSNP),
+• E la trasformata shearlet non campionata (NSST).
+Metodo proposto:
+1. La serie temporale multivariata viene trasformata nel dominio NSST, che consente di ottenere rappresentazioni multiscala e multirisoluzione.
+2. In questo dominio, vengono costruiti, addestrati e utilizzati i sistemi NSNP come modelli predittivi non lineari.
+3. Il metodo può quindi gestire efficacemente serie temporali non lineari e non stazionarie, e le dipendenze tra variabili sono catturate dalle feature multirisoluzione fornite dalla trasformata NSST.
+Validazione:
+Sono stati utilizzati 5 dataset reali e il modello è stato confrontato con 5 metodi SOTA e 28 baseline. I risultati mostrano che il metodo proposto è più efficace nella previsione di MTS rispetto agli approcci esistenti.",,,,,,,
+Evolving graph structure learning for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","Negli ultimi anni, l’applicazione delle Graph Neural Networks (GNN) alla previsione di serie temporali multivariate (MTSF) ha portato a risultati notevoli. Tuttavia, molti approcci precedenti utilizzano matrici di adiacenza dense e statiche (sia costruite manualmente che apprese automaticamente), che non riflettono la natura dinamica e sparsa delle interazioni tra variabili reali.
+Contributi principali del lavoro:
+1. Sparsificazione della struttura del grafo: si costruisce una struttura principale e sparsa in modo differenziabile a partire da un grafo denso, utilizzando la tecnica Gumbel-Softmax.
+2. Evoluzione dinamica del grafo: si generano grafi temporali dinamici con una RNN per modellare le correlazioni variabili nel tempo tra le variabili a ogni singolo timestamp.
+3. Vincolo temporale: si introduce un vincolo di regolarizzazione temporale per rafforzare la continuità e coerenza temporale dei grafi evolutivi durante l’allenamento.
+4. Si costruisce un modello neurale unificato che integra tutti i moduli sopra elencati, modellando sia le dipendenze temporali che le correlazioni tra coppie di variabili.
+Esperimenti:
+Il modello è stato testato su sei dataset reali di diversi domini, valutando sia previsioni a singolo passo che multi-step. I risultati dimostrano che il metodo supera significativamente gli approcci esistenti in termini di accuratezza.",,,,,,,
+Irregular Multivariate Time Series Forecasting: A Transformable Patching Graph Neural Networks Approach,2024,"RQ1, RQ2, RQ3, RQ4","La previsione di serie temporali multivariate irregolari (IMTS) è fondamentale in vari settori come sanità, biomeccanica, scienze climatiche e astronomia. Sebbene alcune ricerche abbiano affrontato le irregolarità tramite equazioni differenziali ordinarie (ODE), rimane poco esplorata la modellazione delle correlazioni tra serie temporali asincrone.
+Per affrontare questo limite, viene proposto il modello T-PATCHGNN (Transformable Patching Graph Neural Network) che:
+1. Trasforma ciascuna serie temporale univariata irregolare in una sequenza di ""patch"" trasformabili (blocchi temporali) con risoluzione temporale uniforme ma numero variabile di osservazioni, facilitando:
+    ◦ la cattura di informazioni locali
+    ◦ la modellazione delle correlazioni tra serie
+    ◦ ed evitando l’esplosione della lunghezza delle sequenze dopo l’allineamento.
+2. A partire dai patch allineati, introduce una Graph Neural Network adattiva nel tempo, in grado di modellare le correlazioni dinamiche tra le serie tramite grafi variabili nel tempo appresi durante l’allenamento.
+3. Il modello è valutato su un benchmark completo per forecasting IMTS, costruito dagli autori stessi, che include 4 dataset scientifici reali (sanità, biomeccanica, clima) e 17 baseline competitive.",,,,,,,
+BiT-MAC: Mortality prediction by bidirectional time and multi-feature attention coupled network on multivariate irregular time series,2023,"RQ1, RQ2, RQ3, RQ4","La predizione della mortalità è essenziale per valutare la gravità di una malattia e migliorare la prognosi del paziente. Una strategia comune consiste nell’analizzare serie temporali multivariate (MTS) derivanti da dati clinici (es. frequenza cardiaca, pressione arteriosa media invasiva). Tuttavia, questi dati presentano spesso problemi di sparsezza, campionamento irregolare e valori mancanti, che compromettono le performance delle analisi successive.
+Per superare queste difficoltà, viene proposto il modello BiT-MAC (Bidirectional Time and Multi-feature Attention Coupled network), il quale:
+• Utilizza una RNN bidirezionale per modellare le dipendenze temporali (intra-serie).
+• Impiega un meccanismo di multi-head attention per cogliere le relazioni latenti tra variabili (inter-serie).
+• Combina le rappresentazioni intra- e inter-serie per ricostruire valori mancanti e migliorare la predizione della mortalità.
+Il modello è stato testato su due dataset clinici reali: PhysioNet 2012 e COVID-19, dimostrando risultati superiori rispetto ai modelli SOTA. Inoltre, viene evidenziata la interpretabilià delle feature grazie a un case study.",,,,,,,
+Multidimensional dynamic attention for multivariate time series forecasting,2024,"RQ1, RQ2, RQ3, RQ4","I modelli basati su meccanismi di attenzione sono molto efficaci nell’identificare le variabili ritardate (lagged) più rilevanti nella previsione di serie temporali multivariate (MTS). Tuttavia, i modelli esistenti assegnano pesi statici, non riuscendo a cogliere la natura dinamica delle previsioni multistep in MTS eterogenei.
+Per risolvere questa limitazione, viene proposto un nuovo modello chiamato MDA (Multidimensional Dynamic Attention), che:
+• utilizza un modulo di rappresentazione dinamico,
+• calcola attenzioni multiple per tener conto di:
+    ◦ dinamiche predittive,
+    ◦ informazioni temporali,
+    ◦ relazioni tra variabili.
+Il modello è stato testato con dati sintetici e reali, superando altri metodi nello scenario sequence-to-sequence forecasting per MTS eterogenei, con miglioramenti fino al 33%.",,,,,,,
+LAVARNET: Neural network modeling of causal variable relationships for multivariate time series forecasting,2020,"RQ1, RQ2, RQ3, RQ4","La previsione di serie temporali multivariate (MTS) è fondamentale in ambito scientifico e industriale. Tuttavia, molti modelli esistenti ignorano le relazioni causali tra le variabili del sistema, oppure si limitano a mappare solo la rete di causalità tra variabili, senza identificare con precisione quali lagged variables (variabili ritardate) influenzano davvero l’evoluzione del sistema.
+Per colmare questa lacuna, gli autori propongono LAVARNET (Lagged Variable Representation Network), un'architettura neurale che:
+• stima l’importanza delle variabili ritardate,
+• genera rappresentazioni latenti ad alta dimensionalità,
+• e le combina per predire i valori futuri della serie.
+Il modello è stato testato su un dataset simulato e quattro reali (meteorologia, musica, attività solare e finanza), e ha superato altri modelli SOTA in gran parte degli esperimenti.",,,,,,,
+TMF-GNN: Temporal matrix factorization-based graph neural network for multivariate time series forecasting with missing values,2025,"RQ1, RQ2, RQ3, RQ4","La mancanza di dati è un problema molto comune nelle serie temporali multivariate (MTS), spesso dovuto a malfunzionamenti nei sensori o problemi di trasmissione. Queste lacune possono introdurre errori e bias nei modelli di previsione. Per affrontare il problema, gli autori propongono un nuovo metodo chiamato TMF-GNN (Temporal Matrix Factorization-based Graph Neural Network), che:
+• Ricostruisce i dati MTS incompleti tramite fattorizzazione di matrici temporali (TMF).
+• Integra metodi di regolarizzazione adattivi ai dati, utilizzando reti neurali grafiche (GNN) e modelli sequenziali deep learning.
+• Tiene conto delle informazioni sia lungo l’asse temporale che tra le variabili (asse spaziale).
+Attraverso esperimenti su tre dataset MTS reali, TMF-GNN dimostra prestazioni superiori rispetto ai metodi di riferimento, offrendo un’alternativa utile per la previsione in presenza di dati mancanti.",,,,,,,
+DPEM: Dual-Perspective Enhanced Mamba for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","Il paper propone un nuovo framework chiamato DPEM (Dual-Perspective Enhanced Mamba) per il forecasting di serie temporali multivariate (MTSF). L’obiettivo è catturare le dipendenze spaziotemporali eterogenee, un aspetto ancora sfidante nei metodi attuali.
+La metodologia si basa su due moduli chiave:
+• MSCM (Multi-Scale Convolution Mamba) per modellare pattern periodici complessi dal punto di vista Channel-Dependent (cioè, dipendenze temporali).
+• AGCM (Adaptive Graph Convolution Mamba) per modellare le dipendenze spaziali tra le variabili dal punto di vista Channel-Independent.
+Entrambi i moduli aiutano a ridurre le interferenze durante l’estrazione delle feature. Inoltre, viene introdotto un meccanismo di cross-attention multi-head per integrare efficacemente le informazioni temporali e spaziali.
+Infine, su 8 dataset benchmark, il modello raggiunge prestazioni SOTA e riduce i costi computazionali grazie all’uso del backbone Mamba.",,,,,,,
+Foreformer: an enhanced transformer-based framework for multivariate time series forecasting,2023,"RQ1, RQ2, RQ3, RQ4","Il paper propone un nuovo framework chiamato DPEM (Dual-Perspective Enhanced Mamba) per il forecasting di serie temporali multivariate (MTSF). L’obiettivo è catturare le dipendenze spaziotemporali eterogenee, un aspetto ancora sfidante nei metodi attuali.
+La metodologia si basa su due moduli chiave:
+• MSCM (Multi-Scale Convolution Mamba) per modellare pattern periodici complessi dal punto di vista Channel-Dependent (cioè, dipendenze temporali).
+• AGCM (Adaptive Graph Convolution Mamba) per modellare le dipendenze spaziali tra le variabili dal punto di vista Channel-Independent.
+Entrambi i moduli aiutano a ridurre le interferenze durante l’estrazione delle feature. Inoltre, viene introdotto un meccanismo di cross-attention multi-head per integrare efficacemente le informazioni temporali e spaziali.
+Infine, su 8 dataset benchmark, il modello raggiunge prestazioni SOTA e riduce i costi computazionali grazie all’uso del backbone Mamba.",,,,,,,
+A dual-topological graph memory network for anti-noise multivariate time series forecasting,2024,"RQ1, RQ2, RQ3, RQ4","Il paper propone un nuovo modello chiamato DualGM (Dual-Topological Graph Memory network) per il forecasting di serie temporali multivariate (MTS) in presenza di dati rumorosi. L’obiettivo è migliorare la capacità del modello di catturare le dipendenze tra variabili anche in ambienti con forte interferenza di rumore, un limite frequente nei dati reali.
+Caratteristiche principali del modello:
+• Costruisce due grafi topologici: uno basato sulla probabilità e uno sulla distanza, entrambi derivati dalle similarità tra campioni.
+• Utilizza un modulo di memoria con self-attention bidirezionale, per mantenere e integrare le informazioni topologiche.
+• La struttura a gruppi multilivello migliora l'estrazione delle caratteristiche rilevanti e filtra il rumore.
+Risultati sperimentali: su 4 dataset reali, il modello supera altri metodi di stato dell’arte, con miglioramenti (in RSE) fino al 37%.",,,,,,,
+Plag-Llama for IoT-Enabled Data Centers: A Multivariate Time Series Forecasting Approach,2024,"RQ1, RQ2, RQ3, RQ4","Questo studio affronta il problema della previsione delle serie temporali multivariate (MTS) nei data center abilitati da IoT, dove si osserva scarsità di dati. I metodi deep learning tradizionali faticano in queste condizioni.
+Gli autori propongono:
+• Plag-Llama, un modello per MTS forecasting che trasferisce conoscenza da un modello univariato (Lag-Llama) verso il dominio multivariato.
+• Introducono il JCT-adapter (Joint Channel-Time), un modulo di fine-tuning che migliora l’efficienza computazionale e la capacità di generalizzazione del modello.
+• Il modello supporta zero-shot e few-shot forecasting, ed è validato su dati reali di data center.",,,,,,,
+Not Only Pairwise Relationships: Fine-Grained Relational Modeling for Multivariate Time Series Forecasting,2023,"RQ1, RQ2, RQ3, RQ4","Il lavoro presenta ReMo, un nuovo metodo di forecasting per serie temporali multivariate (MTS) basato sulla modellazione relazionale. Gli autori evidenziano una limitazione comune nei metodi grafici esistenti: la maggior parte si limita a modellare relazioni tra coppie di variabili, trascurando relazioni più complesse (oltre la coppia) e le categorie di relazione presenti in scenari reali.
+I principali contributi:
+• Costruzione di ipergrafi multivista dove nodi = variabili e iperarchi = relazioni complesse.
+• Nuova strategia di message passing su ipergrafo per caratterizzare nodi e iperarchi, distinguendo tra categorie relazionali e impatti differenti.
+• Miglioramenti evidenziati su sette dataset pubblici in vari domini, rispetto a baseline esistenti.",,,,,,,
+Temporal decomposition and attribute correlation differentiation at multiple scales: A graph imputation network for incomplete multivariate time series,2025,"RQ1, RQ2, RQ3, RQ4","Il paper propone GITAM, un modello basato su reti neurali grafiche per imputare valori mancanti in serie temporali multivariate (MTS). L’approccio affronta i seguenti problemi comuni:
+• Complessità delle dipendenze temporali e tra attributi.
+• Mancanza di valori nei dati reali.
+I punti chiave del modello GITAM:
+1. Modulo di decomposizione multiscala per estrarre trend e componenti stagionali, evidenziando dinamiche a diverse scale temporali.
+2. Grafi temporali multiscala per modellare la dipendenza temporale tra i punti della serie.
+3. Grafo eterogeneo degli attributi, che differenzia tra correlazioni omogenee (simili) ed eterogenee tra variabili.
+4. Convoluzione sincrona spazio-temporale, che integra in un solo passaggio le informazioni temporali e di attributo, migliorando l’imputazione.
+I risultati su diversi dataset reali mostrano che GITAM supera i modelli baseline in vari scenari di dati mancanti.",,,,,,,
+Improving Medical Predictions by Irregular Multimodal Electronic Health Records Modeling,2023,"RQ1, RQ2, RQ4","Questo lavoro affronta il problema della previsione medica basata su dati multimodali (serie temporali numeriche + note cliniche testuali) raccolti nei reparti di terapia intensiva (ICU). Entrambe le fonti sono irregolari nel tempo:
+• Serie temporali numeriche: misurate in modo irregolare (es. pressione ogni 5 minuti, glicemia ogni ora).
+• Note cliniche: scritte in momenti variabili e non sempre sincroni con i dati numerici.
+Strategia proposta:
+1. Per ogni singola modalità:
+    ◦ Serie temporali → Combina embedding imputati (da tecniche manuali) e embedding interpolati (da modelli), fusi tramite un gating mechanism dinamico.
+    ◦ Note cliniche → Trattate come serie temporali multivariate irregolari, gestite tramite time-aware attention.
+2. Per la fusione multimodale:
+    ◦ Introduce una interleaved attention tra le due modalità, che tiene conto della variabilità temporale nel fusion process.
+Risultati:
+• Test su due task clinici.
+• F1-score migliorato rispetto a tutti i modelli baseline SOTA:
+    ◦ +6.5% (solo time series)
+    ◦ +3.6% (solo note cliniche)
+    ◦ +4.3% (fusione multimodale)",,,,,,,
+Pattern-oriented Attention Mechanism for Multivariate Time Series Forecasting,2025,"RQ1, RQ2, RQ3, RQ4","La previsione di serie temporali multivariate (MTSF) trova applicazione in settori come la finanza, i trasporti e l’industria. Una delle principali difficoltà consiste nel catturare dipendenze latenti tra le variabili. Gli approcci recenti cercano di affrontare questo problema riducendo la complessità computazionale o migliorando l'apprendimento delle relazioni, ma spesso risultano poco interpretabili o troppo specifici.
+Questo lavoro propone una nuova prospettiva: considerare le dipendenze come pattern ricorrenti, definiti in due modi:
+• la forma dei segmenti che si ripetono frequentemente;
+• il modo in cui tali segmenti si ripetono nel tempo.
+Modello proposto: PRformer
+• Introduce un meccanismo di attenzione orientato ai pattern, che rileva forme di ripetizione usando diverse metriche di similarità tra segmenti, e rimuove il rumore grazie a una pesatura statistica.
+• Utilizza un proiettore basato sui pattern, che seleziona i pattern rappresentativi e li usa per generare la previsione.
+Risultati:
+• Il modello è interpretabile e generalizzabile a diversi scenari.
+• Su 7 dataset, PRformer supera di circa il 10,7% sei modelli all’avanguardia in termini di accuratezza di previsione.",,,,,,,
+STTRE: A Spatio-Temporal Transformer with Relative Embeddings for multivariate time series forecasting,2023,"RQ1, RQ2, RQ3, RQ4","Questo studio propone un modello Transformer chiamato STTRE (Spatio-Temporal Transformer with Relative Embeddings) per affrontare il problema della previsione in serie temporali multivariate. L’idea nasce dall’adattamento del Transformer (nato per NLP) alla natura spazio-temporale delle serie multivariate. I principali limiti dei Transformer tradizionali in questo contesto sono:
+• Ignorano le componenti spaziali dei dati (es. relazioni tra variabili);
+• Usano solo positional embedding assoluti per modellare il tempo, il che non è ideale per le serie temporali.
+Per superare questi problemi, STTRE introduce:
+• Relative embeddings (posizionamento relativo) per catturare dipendenze latenti temporali, spaziali e spatio-temporali;
+• Un’attenzione multi-head ristrutturata per sfruttare appieno queste relative embeddings.
+Sui benchmark pubblici, il modello ha ottenuto miglioramenti fino al 24% rispetto ai modelli SOTA esistenti.",,,,,,,
+BiCMTS: Bidirectional Coupled Multivariate Learning of Irregular Time Series with Missing Values,2021,"RQ1, RQ2","Le serie temporali multivariate (MTS), come le misure cliniche multiple nei reparti di terapia intensiva (ICU), sono spesso raccolte in modo irregolare e contengono valori mancanti.
+Problema:
+
+Fare previsioni (es. mortalità dei pazienti ICU) su questi dati è difficile per i modelli classici di forecasting e per le RNN, che catturano solo la dipendenza temporale lineare all’interno di una serie.
+Soluzione proposta: BiCMTS
+• Bidirectional coupled learning:
+    ◦ Le dipendenze intra-temporali (dentro una singola serie temporale) sono apprese in avanti e all’indietro tramite RNN bidirezionali.
+    ◦ Le dipendenze inter-serie (tra variabili) sono modellate con self-attention.
+• Le rappresentazioni intra/inter sono poi fuse per stimare i valori mancanti.
+• Test su imputazione dati e predizione di mortalità su pazienti ICU → mostra ottimi risultati nel catturare relazioni nascoste nei dati MTS.",,,,,,,
+CAWformer: A cross variable attention with discrete wavelet denoising for multivariate time series forecasting,2025,RQ1,"La previsione di serie temporali multivariate (MTSF) è cruciale in settori come finanza, trasporti, energia e sanità. I modelli Transformer esistenti tendono a concentrarsi solo sulle dipendenze intra- o inter-serie, trascurando la loro combinazione, limitando la performance predittiva.
+Soluzione proposta – CAWformer:
+
+Un modello Transformer-based che affronta simultaneamente:
+• Dipendenze intra-sequenza (fluttuazioni interne nel tempo).
+• Dipendenze inter-sequenza (correlazioni tra variabili).
+Componenti principali:
+1. Multi-scale slicing + Autoregressive Shift:
+    ◦ Suddivide la serie in più scale temporali e sposta autoregressivamente la sequenza per evidenziare fluttuazioni.
+    ◦ Usa autoregressive attention per catturare efficacemente le dipendenze interne.
+2. Cross-correlazioni nel dominio della frequenza:
+    ◦ Calcola le correlazioni tra variabili in dominio spettrale, permettendo di cogliere relazioni complesse tra feature.
+3. Discrete Wavelet Transform (DWT) sui residui:
+    ◦ Decompone i segnali residui in diverse scale per rimuovere il rumore casuale mantenendo i dettagli chiave → riduce l’overfitting.
+Risultati:
+
+Esperimenti su dataset reali mostrano che CAWformer supera significativamente gli altri modelli SOTA in accuratezza predittiva.",,,,,,,
+Heterogeneous Graph Transformer Auto-Encoder for multivariate time series forecasting,2025,"RQ1, RQ2","La previsione di serie temporali multivariate (MTS) è fondamentale per ottimizzare le applicazioni intelligenti. Tuttavia, è difficile da modellare a causa delle complesse relazioni tra variabili (dipendenze intervariabili e pattern temporali). I metodi esistenti tendono ad assumere una relazione unica tra le variabili → questo porta a un modello che apprende solo un pattern temporale condiviso, trascurando relazioni complesse o multiple.
+Soluzione proposta – HGTAE:
+
+Un modello Transformer Auto-Encoder su grafo eterogeneo, con i seguenti componenti:
+1. Costruzione di un grafo eterogeneo con a priori knowledge (relazioni multiple tra le variabili → es. causali, spaziali, funzionali).
+2. Modulo adattivo per proiettare variabili eterogenee nello stesso spazio di embedding, rendendo confrontabili feature di diversa natura.
+3. Auto-Encoder eterogeneo su grafo per:
+    ◦ apprendere le correlazioni tra variabili tramite relazioni meta (meta-relations),
+    ◦ catturare le dipendenze temporali,
+    ◦ ricostruire gli attributi dei nodi → utile per forecasting e imputazione.
+Risultati:
+
+Valutato su task di link prediction e node prediction su dataset reali, con buoni risultati per il forecasting multivariato.",,,,,,,

@@ -1,0 +1,116 @@
+﻿Title,Anno,RQ,Descrizione abstract,Metodo,Tipo di dati,Tecnica per missing,Tecnica per eterogeneità,Risultati principali,Review Status,Link
+Joint Modeling of Local and Global Temporal Dynamics for Multivariate Time Series Forecasting with Missing Values,2020,"RQ1, RQ2, RQ3, RQ4","L’articolo parte da un’osservazione concreta: nei dati MTS reali (es. meteo, traffico), i valori mancanti sono frequenti, a causa di limitazioni nei sensori, nella trasmissione o nello storage.
+Problema:
+• I metodi esistenti imputano i missing values principalmente con dipendenze locali, ignorando pattern temporali globali.
+• Questo approccio è fragile quando:
+    ◦ Il missing rate è elevato;
+    ◦ I valori mancanti sono consecutivi.
+Soluzione proposta – øurs framework:
+• Modella congiuntamente le dinamiche locali e globali:
+    ◦ Usa una memory network per catturare pattern globali, partendo da stime locali.
+    ◦ Integra adversarial training per migliorare la rappresentazione della distribuzione temporale globale.
+• Obiettivo: migliorare la robustezza nella previsione MTS con alti tassi di dati mancanti.
+Risultati:
+• Testato su dataset reali, il modello dimostra efficacia e robustezza rispetto a diverse percentuali di missing.",,,,,,,
+Dynamic Gaussian Mixture based Deep Generative Model For Robust Forecasting on Sparse Multivariate Time Series,2021,"RQ1, RQ2, RQ3, RQ4","Il lavoro affronta in modo esplicito la previsione su MTS sparse, un problema chiave per applicazioni reali in cui i dati sono incompleti, disallineati o con elevata perdita informativa.
+
+Problemi delle soluzioni esistenti:
+Trattano le MTS singolarmente, ignorando la struttura dinamica sottostante;
+
+Questo approccio porta a risultati sub-ottimali in condizioni di alta sparsità.
+
+Soluzione proposta – modello generativo con cluster dinamici:
+Modello generativo parametrizzato da reti neurali, che non si limita a rappresentazioni isolate ma:
+
+Traccia la transizione di cluster latenti;
+
+Utilizza una distribuzione Gaussiana mista dinamica per emettere valori di serie temporali.
+
+Include:
+
+Rete di inferenza strutturata per analisi induttiva;
+
+Meccanismo di gating per modulare dinamicamente le distribuzioni.
+
+Risultati:
+Convalidato su vari dataset reali, con migliori performance nella modellazione di MTS sparse.",,,,,,,
+Reconstructing Missing Variables for Multivariate Time Series Forecasting via Conditional Generative Flows,2024,"RQ1, RQ2, RQ3, RQ4","L’articolo introduce e affronta in modo diretto il problema del Variable Subset Forecasting (VSF) — un caso estremo e realistico di sparsità strutturale, in cui molte variabili sono completamente non disponibili durante l’inferenza, situazione comune in vari contesti reali (es. IoT, sistemi industriali, medicina).
+
+Problemi affrontati:
+Variabili mancanti strutturalmente (non solo valori);
+
+Assenza di correlazioni esplicite tra le variabili osservate e non osservate;
+
+Impossibilità di retraining continuo quando cambia il subset osservato;
+
+Limiti dei metodi esistenti:
+
+Affidamento su correlazioni temporali locali;
+
+Alti costi computazionali e scarsa capacità di generalizzazione.
+
+Soluzione proposta:
+TRF – Time-series Reconstruction Flows:
+
+Modello generativo basato su flussi di densità (normalizing flows);
+
+Ricostruisce le variabili mancanti sfruttando le dipendenze apprese tra subset osservato e mancante.
+
+Variable-Agnostic Meta Learning:
+
+Meta-framework per rendere il modello adattabile a qualunque combinazione di variabili mancanti;
+
+Migliora la generalizzazione senza bisogno di retraining.
+
+Validazione empirica dimostra che TRF supera i baseline su vari scenari.",,,,,,,
+Handling Massive Proportion of Missing Labels in Multivariate Long-Term Time Series Forecasting,2021,"RQ1, RQ2, RQ3, RQ4","L’articolo si concentra su un caso particolarmente critico nel training di modelli di deep learning: la presenza massiva di etichette mancanti (MPML) nei dataset reali, in particolare in ambiti ingegneristici complessi (come la produzione biologica).
+Contesto e sfida:
+• Etichette (output target) mancanti in grande quantità rendono impraticabile l’addestramento diretto di modelli DL;
+• Le tecniche di imputazione tradizionali non funzionano bene con MPML.
+Soluzione proposta – approccio in due fasi:
+1. Interpolazione delle etichette tramite:
+    ◦ Gaussian Process Regression (GPR);
+    ◦ Integrazione di conoscenza esperta (domain knowledge);
+    ◦ Viene generato un insieme di campioni plausibili delle etichette mancanti.
+2. Training del modello predittivo:
+    ◦ Si usano i dati dei sensori (input osservabili) e le etichette interpolate con GPR per addestrare un modello DL di forecasting.
+Caso d’uso reale:
+• Previsione della biomassa in bioreattori durante la produzione di virus rAAV.
+• Esperimenti mostrano buona accuratezza delle previsioni, anche in condizioni in cui il training DL diretto sarebbe quasi impossibile.",,,,,,,
+TimePFN: Effective Multivariate Time Series Forecasting with Synthetic Data,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta un problema centrale in molte applicazioni reali: la scarsità di dati specifici per dominio e la necessità di modelli che funzionino bene in scenari zero-shot o few-shot.
+Contributi principali:
+• TimePFN è una nuova architettura Transformer-based ispirata ai Prior-data Fitted Networks (PFN), pensata per approssimare l’inferenza bayesiana nel forecasting MTS.
+• Il framework comprende:
+    1. Generazione sintetica di MTS usando Gaussian Process kernels e Linear Coregionalization Method (LCM);
+    2. Una nuova architettura MTS in grado di modellare dipendenze temporali e tra canali simultaneamente su tutti i patch d’ingresso.
+• Prestazioni eccellenti su benchmark MTS:
+    ◦ Ottimo rendimento in few-shot learning (anche con 50 o 500 punti dati);
+    ◦ Performance competitiva anche su univariate;
+    ◦ Supera i modelli SOTA in scenari zero-shot e few-shot",,,,,,,
+TimeCHEAT: A Channel Harmony Strategy for Irregularly Sampled Multivariate Time Series Analysis,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta il problema complesso della previsione e classificazione di serie temporali multivariate campionate in modo irregolare — uno scenario molto comune in contesti reali come sanità, IoT e finanza.
+Sfida chiave:
+• La strategia channel-independent (CI), di recente efficace su MTS complete, fallisce in presenza di campionamento irregolare e sparse data, perché non riesce a estrarre pattern significativi con dati frammentari.
+• La strategia channel-dependent (CD), che tratta ogni canale con maggiore capacità, rischia di perdere diversità se applicata globalmente.
+Soluzione proposta – TimeCHEAT:
+• Introduce una combinazione armonizzata delle strategie CI e CD:
+    ◦ Localmente: applica CD strategy su sub-serie (patch) → aggrega meglio le osservazioni locali e riduce rumore a lungo raggio.
+    ◦ Globalmente: applica CI strategy tra patch → consente apprendimento diversificato per canale.
+• La trasformazione in edge-weight prediction task mediante grafi bipartiti migliora la generalizzazione e riduce la dipendenza da conoscenza a priori.
+Prestazioni:
+• Test su tre task principali: classificazione, interpolazione e previsione;
+• TimeCHEAT raggiunge performance competitive con lo stato dell’arte",,,,,,,
+HDT: Hierarchical Discrete Transformer for Multivariate Time Series Forecasting,2025,"RQ1, RQ3, RQ4","Il lavoro affronta due problemi cruciali nella previsione generativa di MTS:
+1. Bassa scalabilità dei modelli generativi con l’aumentare della dimensionalità;
+2. Difficoltà a estendere l’orizzonte di previsione (forecasting length) in contesti multivariati complessi.
+Soluzioni tecniche proposte – Hierarchical Discrete Transformer (HDT):
+• Trasforma la previsione MTS in un problema di generazione di token discreti, tramite:
+    ◦ Vector Quantization (VQ) migliorata con L2 normalization;
+    ◦ Codifica delle MTS in token discreti, riducendo la complessità e migliorando l’inferenza.
+• Architettura gerarchica:
+    ◦ Low-level: apprende le tendenze a lungo termine dei target sotto forma di token discreti;
+    ◦ High-level: usa queste tendenze come condizione per generare previsioni dettagliate del target;
+    ◦ Questo approccio consente di estendere l’orizzonte di previsione mantenendo accuratezza su serie ad alta dimensionalità.
+Risultati:
+• Testato su cinque dataset MTS popolari;
+• Dimostra prestazioni superiori in scenari di alta dimensionalità e forecasting a lungo termine;
+• Il codice sarà reso disponibile, facilitando la riproducibilità.",,,,,,,

@@ -1,0 +1,193 @@
+﻿Title,Anno,RQ,Descrizione abstract,Metodo,Tipo di dati,Tecnica per missing,Tecnica per eterogeneità,Risultati principali,Review Status,Link
+Scalable Transformer for High Dimensional Multivariate Time Series Forecasting,2024,"RQ1, RQ2, RQ3, RQ4",,"Questo studio introduce STHD (Scalable Transformer for High-Dimensional MTS Forecasting), un modello transformer progettato per affrontare le sfide della previsione di serie temporali multivariate ad alta dimensionalità. Il lavoro parte da una riflessione critica: i modelli channel-dependent che dovrebbero catturare meglio le dipendenze tra variabili, spesso falliscono nei contesti reali ad alta dimensionalità a causa di:
+1. Rumore introdotto da serie non correlate;
+2. Difficoltà di addestramento su dati con molte dimensioni.
+Per risolvere questi problemi, STHD integra:
+• 🧩 Relation Matrix Sparsity, che riduce il rumore e l’uso di memoria;
+• 🔄 ReIndex, una strategia di addestramento flessibile che migliora la diversità dei batch;
+• 📐 Un Transformer ottimizzato per dati bidimensionali e in grado di catturare dipendenze tra canali (variabili).
+I risultati sperimentali su tre dataset reali ad alta dimensionalità dimostrano miglioramenti significativi rispetto agli stati dell’arte. Il codice e i dati sono pubblici.",,,,,,
+GinAR: An End-To-End Multivariate Time Series Forecasting Model Suitable for Variable Missing,2024,"RQ1, RQ2, RQ3, RQ4","Questo studio presenta GinAR (Graph Interpolation Attention Recursive Network), un modello pensato per affrontare i limiti degli attuali Spatial-Temporal Graph Neural Networks (STGNNs) nella previsione di serie temporali multivariate con dati mancanti.
+
+Gli STGNNs tradizionali presuppongono dati storici completi, ma nella realtà spesso i dati sono incompleti o parziali, ad esempio a causa di guasti nei sensori. In questi casi, le dipendenze spazio-temporali risultano mal modellate e le performance peggiorano.
+
+GinAR risolve questo problema introducendo:
+
+🧠 Interpolation Attention: recupera le variabili mancanti;
+
+🌐 Adaptive Graph Convolution: ricostruisce in modo adattivo le relazioni spaziali corrette;
+
+🔁 Architettura ricorsiva per modellare nel tempo le dipendenze apprese.
+
+Inoltre, il modello è stato testato su cinque dataset reali, superando 11 modelli SOTA, anche in casi estremi con 90% di dati mancanti.",,,,,,,
+General Time Transformer: an Encoder-only Foundation Model for Zero-Shot Multivariate Time Series Forecasting,2024,"RQ3, RQ4","Il paper introduce General Time Transformer (GTT), un modello foundation encoder-only progettato per la previsione zero-shot di serie temporali multivariate.
+Le principali caratteristiche del modello sono:
+• 📊 Pretraining su larga scala: 200 milioni di serie temporali multivariate di alta qualità, provenienti da domini eterogenei.
+• 🧩 Rappresentazione “immagine-like”: le serie temporali sono trattate come immagini a canali multipli, con ogni canale rappresentato da “curve patches”.
+• 🔮 Previsione zero-shot: il modello prevede la “forma della curva successiva” senza bisogno di ulteriori fasi di training su dataset specifici.
+• 🧪 Risultati sperimentali: prestazioni superiori a baseline supervisionate anche su dataset mai visti prima.
+• 📈 Scalabilità: si osserva una scaling law anche per questo tipo di modello nel contesto della MTS forecasting zero-shot.",,,,,,,
+TSMixer: Lightweight MLP-Mixer Model for Multivariate Time Series Forecasting,2023,"RQ1, RQ3, RQ4","Il paper propone TSMixer, un'architettura leggera basata esclusivamente su moduli MLP (multi-layer perceptron) per la previsione e la rappresentazione di serie temporali multivariate, in alternativa ai Transformer.
+Le principali innovazioni del lavoro includono:
+• 📦 Serie temporali suddivise in patch, adattando il concetto di MLP-Mixer dalla visione artificiale al dominio temporale.
+• 🔄 Reconciliation heads integrati nell’architettura per modellare gerarchie e correlazioni tra canali.
+• 🔀 Hybrid channel modeling per trattare interazioni rumorose e favorire la generalizzazione.
+• 🎚️ Gated attention mechanism per evidenziare le feature più rilevanti.
+• 🔧 Compatibilità con apprendimento supervisionato e auto-supervisionato, utile per contesti di scarsità di etichette.
+📈 Risultati: TSMixer supera modelli Transformer e MLP recenti con margini fino al 60%, mantenendo un basso costo computazionale (2-3 volte inferiore in memoria/runtime).",,,,,,,
+Dynamic Spatial-Temporal Embedding via Neural Conditional Random Field for Multivariate Time Series Forecasting,2024,"RQ1, RQ2, RQ3, RQ4","Il paper affronta un problema chiave ancora aperto nella previsione di serie temporali multivariate (MTS): come catturare le dipendenze spazio-temporali dinamiche.
+Propone un nuovo paradigma chiamato ASTCRF (Adaptive Spatial-Temporal Graph Neural Network with Conditional Random Field) che integra due plugin innovativi:
+1. 🔗 Neural Conditional Random Field (CRF): cattura dipendenze spaziali dinamiche modellando le connessioni evolutive tra i nodi nel tempo. Questo consente di superare i limiti delle rappresentazioni statiche o discrete comunemente adottate negli STGNN.
+2. 🌐 Structure Adaptive Graph Convolution (SAGC): elimina la necessità di grafi predefiniti e apprende correlazioni semantiche più ricche tra variabili direttamente dai dati.
+Il modello finale unisce questi due componenti a una rete neurale ricorrente, ed è allenabile end-to-end.
+📊 Il modello è stato testato su cinque dataset benchmark pubblici per la previsione MTS, dimostrando ottima efficienza, scalabilità e accuratezza.",,,,,,,
+A Recurrent Neural Network based Generative Adversarial Network for Long Multivariate Time Series Forecasting,2023,"RQ1, RQ3, RQ4","Questo studio propone RNNGAN, un’architettura ibrida che combina:
+• una RNN (più precisamente, una LSTM) per catturare la dinamica temporale;
+• e una GAN (Generative Adversarial Network) per migliorare la capacità generativa e di previsione, soprattutto nel contesto delle serie temporali multivariate lunghe.
+Il lavoro si posiziona come alternativa ai Transformer, sostenendo che meccanismi di autoattenzione, sebbene efficaci, non siano indispensabili. L’approccio mira a superare i limiti delle RNN tradizionali nella previsione a lungo termine, sfruttando la componente avversaria della GAN per generare previsioni più realistiche.
+📊 I risultati sperimentali dimostrano che RNNGAN ottiene performance competitive rispetto ai modelli SOTA (state-of-the-art) su diversi dataset MTS in ambiti come energia, traffico, social data.",,,,,,,
+Learning the Evolutionary and Multi-scale Graph Structure for Multivariate Time Series Forecasting,2022,"RQ1, RQ2, RQ3, RQ4","Questo studio affronta una delle principali limitazioni delle GNN applicate alla previsione di serie temporali multivariate:❗ l’assunzione che la struttura del grafo (matrice di adiacenza) sia fissa nel tempo.
+In scenari reali, le interazioni tra variabili:
+• sono dinamiche (cambiano nel tempo);
+• possono variare a seconda della scala temporale osservata (es. giornaliera vs settimanale).
+📌 Soluzione proposta:
+1. Struttura gerarchica del grafo → per cogliere correlazioni a scale diverse tramite convoluzioni dilatate.
+2. Serie di matrici di adiacenza evolutive → aggiornate in modo ricorrente per rappresentare correlazioni dinamiche nel tempo.
+3. Architettura unificata di rete neurale → che integra dinamiche temporali e relazioni tra variabili in un unico modello.
+📊 Risultati sperimentali su previsioni sia single-step che multi-step dimostrano un netto miglioramento rispetto ai metodi SOTA.",,,,,,,
+METRO: a generic graph neural network framework for multivariate time series forecasting,2021,"RQ1, RQ2, RQ3, RQ4","L’articolo introduce METRO, un framework generico per la previsione di serie temporali multivariate basato su Multi-Scale Temporal Graph Neural Networks.
+📌 Punti chiave:
+• Le serie temporali vengono rappresentate come grafi temporali, in cui i nodi rappresentano le variabili, e gli archi modellano correlazioni intra- e inter-temporali.
+• Il modello affronta due limiti comuni:
+    1. L’assunzione statica delle relazioni tra variabili.
+    2. La non considerazione delle dipendenze tra scale temporali (es. breve e lungo termine).
+• METRO introduce:
+    ◦ Un meccanismo di message passing per aggiornare gli embedding delle variabili.
+    ◦ Una strategia di campionamento multi-scala per favorire la propagazione dell’informazione tra scale temporali.
+• Il framework unifica e generalizza lavori precedenti basati su GNN, mostrando che sono casi particolari di METRO.
+• Validazione su 4 benchmark e test online su Huawei Cloud: fino al +20% di miglioramento relativo su RSE rispetto a SOTA.",,,,,,,
+An Observed Value Consistent Diffusion Model for Imputing Missing Values in Multivariate Time Series,2023,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta uno dei problemi più critici nella previsione di serie temporali multivariate (MTS): la presenza di valori mancanti. L’imputazione corretta è fondamentale per una previsione accurata e interpretabilità. Gli approcci esistenti si dividono principalmente in:
+1. Modelli deterministici basati su deep learning → non modellano l'incertezza.
+2. Modelli generativi che denoizzano campioni rumorosi → ignorano la correlazione tra valori osservati e mancanti.
+📌 Questo lavoro propone una nuova formulazione teorica del problema, partendo da una riformulazione dell’Evidence Lower Bound (ELBO) del modello di diffusione condizionale adattato alle serie temporali multivariate.
+📌 Sulla base di questa teoria, viene sviluppato MIDM:
+• Un modello di diffusione progettato per l’imputazione nei dati MTS;
+• Tiene esplicitamente conto delle correlazioni tra valori osservati e mancanti, poiché provengono dalla stessa distribuzione latente;
+• Integra nuove tecniche di campionamento del rumore, aggiunta e denoising, che migliorano sia l’imputazione che la coerenza interna del dato;
+• Valutato su compiti sia di imputazione che di previsione.
+📊 I risultati sperimentali dimostrano che MIDM supera altri modelli nello stimare valori mancanti in modo condizionato e coerente.",,,,,,,
+Temporal Implicit Multimodal Networks for Investment and Risk Management,2024,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta un problema reale e complesso della previsione di serie temporali multivariate nel contesto finanziario, con un approccio multimodale e multitask. A differenza della maggior parte dei lavori nel deep learning finanziario, che si focalizzano su:
+• previsioni univariate (singolo asset),
+• una singola variabile (prezzo o ritorno),
+• in contesti di trading,
+questo studio mira alla previsione per il portfolio management e la gestione del rischio, dove è fondamentale prevedere:
+• rendimento atteso,
+• rischio (varianza),
+• correlazioni tra asset (covarianza).
+📌 Il modello proposto, TIME, è progettato per:
+• gestire input multimodali (es. prezzo, volume, indicatori tecnici, sentiment, fondamentali...),
+• catturare relazioni intra- e inter-asset che evolvono nel tempo,
+• eseguire forecasting multivariato e multitask, adatto ad applicazioni finanziarie reali come l’ottimizzazione di portafogli.
+🔧 Il cuore del modello include:
+• un modulo per l’apprendimento implicito di reti dinamiche tra serie temporali,
+• codificatori temporali per catturare pattern e dipendenze sequenziali,
+• integrazione tra modalità e task, per massimizzare l’informazione predittiva utile in finanza.
+📊 I risultati mostrano che TIME supera modelli SOTA su vari task di previsione e metriche legate a investimenti e gestione del rischio.",,,,,,,
+Knowledge Graph Guided Simultaneous Forecasting and Network Learning for Multivariate Financial Time Series,2022,"RQ1, RQ2, RQ4","🧾 Contesto e Motivazione
+Prevedere serie temporali finanziarie è difficile a causa di:
+• Dimensione ridotta del campione (small data)
+• Alta correlazione tra le serie
+• Segnali deboli (low signal-to-noise ratio)
+Per risolvere questi problemi, gli autori propongono GregNets, un framework che incorpora knowledge graphs (KGs) per:
+• Migliorare la qualità delle previsioni
+• Estrarre correlazioni strutturate tra variabili
+• Aumentare la robustezza del modello in scenari con pochi dati
+⚙️ Componenti Chiave del MetodoComponenteDescrizioneKG-based RegularizerUn nuovo termine di regolarizzazione che sfrutta le relazioni esplicite nel knowledge graph per guidare la struttura di correlazione.Pseudo-Likelihood LayerLayer personalizzato integrabile in qualsiasi architettura di deep learning (es. TensorFlow), per imparare le strutture di errore residuo.Joint LearningApprendimento congiunto della struttura del grafo e del modello di previsione.
+🧪 Validazione Sperimentale
+• Dataset: Mercati finanziari reali in contesto small sample
+• KGs: Due tipi diversi (es. relazioni societarie, settoriali, economiche)
+• Risultati:
+    ◦ Migliori prestazioni predittive rispetto a baseline deep learning
+    ◦ Strutture di correlazione più sparse e significative
+    ◦ Riduzione dei tempi di calcolo rispetto a modelli full-connected",,,,,,,
+UniTime: A Language-Empowered Unified Model for Cross-Domain Time Series Forecasting,2024,"RQ1, RQ2, RQ3, RQ4","🧾 Contesto
+La previsione di serie temporali multivariate (MTSF) è fondamentale per numerosi ambiti web e tecnologici, ma i metodi tradizionali costruiscono modelli separati per ogni dominio (es. finanza, meteo, traffico).🧩 Problema: Questi approcci frammentati non sono scalabili né generalizzabili.
+⚠️ Sfide Identificate
+1. Eterogeneità dei dati tra domini: numero e tipo di variabili differenti rendono i modelli rigidi inefficaci.
+2. Confusione tra domini: il modello può non distinguere correttamente la provenienza dei dati, degradando le performance.
+3. Velocità di convergenza disomogenea: alcuni domini imparano più rapidamente di altri, generando squilibri nell’ottimizzazione.
+💡 Soluzione Proposta: UniTimeComponenteFunzioneArchitettura flessibileAdatta dinamicamente l'input di variabile dimensione (numero di feature).Language-TS TransformerAllinea due modalità: il contenuto della serie temporale e le ""istruzioni di dominio"", cioè descrittori semantici del contesto.Domain MaskingTecnica per uniformare la convergenza tra domini, evitando che uno domini l'ottimizzazione.Zero-shot transferabilityCapacità del modello di generalizzare anche su domini non visti in fase di addestramento.
+🧪 Esperimenti e Risultati
+• Test su dataset di diversi domini: traffico, clima, energia, web.
+• Migliori performance predittive rispetto ai modelli tradizionali e cross-domain.
+• Ottimi risultati anche in scenari zero-shot, dove il modello deve generalizzare su nuovi domini non osservati in fase di training.",,,,,,,
+Learning Dynamic Graphs from All Contextual Information for Accurate Point-of-Interest Visit Forecasting,2023,"RQ1, RQ2, RQ3, RQ4","🧾 Contesto e Motivazione
+Prevedere il numero di visite ai punti di interesse (POI) urbani è cruciale in diversi ambiti applicativi:
+• pianificazione urbana,
+• gestione dei trasporti,
+• salute pubblica,
+• studi sociali e comportamentali.
+Tradizionalmente, questo problema viene trattato come una forecasting di serie temporali multivariate, dove ogni POI rappresenta una variabile temporale. Tuttavia, gli approcci esistenti non catturano adeguatamente le correlazioni dinamiche e multi-contesto tra i POI.
+⚠️ Limiti dei Modelli Esistenti
+• Si basano solo su dati temporali, ignorando segnali contestuali (es. eventi, meteo, festività).
+• Trascurano le interazioni dinamiche tra POI, che possono cambiare in base a fattori esterni.
+• Non riescono a modellare efficacemente grafi dinamici che riflettano la reale evoluzione urbana.
+💡 Soluzione Proposta: BysGNN
+BysGNN è un modello di Graph Neural Network Temporale, progettato per imparare:
+• le correlazioni dinamiche tra POI,
+• le influenze multi-contesto (temporali, spaziali, semantiche),
+• la struttura dinamica del grafo che evolve nel tempo in base a eventi e comportamenti urbani.
+🧱 Componenti ChiaveComponenteDescrizioneDynamic Graph LearningIl grafo che connette i POI viene appreso automaticamente sfruttando sia i dati temporali che i segnali contestuali (es. meteo, traffico, festività).Multi-context RepresentationOltre alla dimensione temporale, il modello integra anche informazioni spaziali e semantiche, costruendo un embedding completo per ciascun POI.Forecasting LayerUn modulo di previsione usa i grafi dinamici per stimare accuratamente le visite future a ciascun POI.
+🧪 Esperimenti e Risultati
+• Dataset reali raccolti in diverse città statunitensi.
+• Confronto con altri modelli di forecasting multivariato e graph-based.
+• Risultato: BysGNN ha mostrato un miglioramento significativo nelle metriche di accuratezza (es. MAE, RMSE), grazie all’integrazione dei contesti dinamici e delle relazioni spaziali-temporali.",,,,,,,
+MARINA: An MLP-Attention Model for Multivariate Time-Series Analysis,2022,"RQ3, RQ4","🧾 Contesto e Motivazione
+Con l’esplosione di applicazioni real-time — come:
+• AIOps (Artificial Intelligence for IT Operations),
+• IoT (Internet of Things),
+viene generata una quantità massiva di dati time-series. Tuttavia, la loro analisi richiede metodi efficienti, versatili e precisi, capaci di:
+• catturare correlazioni temporali e spaziali,
+• adattarsi sia al forecasting che al rilevamento di anomalie.
+💡 Soluzione Proposta: MARINA
+MARINA (MLP-Attention-based Multivariate Time Series Analysis) è un modello neurale leggero e modulare, progettato per apprendere congiuntamente:
+• le dipendenze temporali (tra punti della stessa variabile),
+• le correlazioni spaziali (tra variabili diverse).
+🧱 ArchitetturaComponenteFunzioneMLP (Multi-Layer Perceptron)Estrae feature locali da ciascuna variabile.Attention MechanismAssegna importanza differenziata alle dipendenze temporali e spaziali.Task-adaptive HeadModulo terminale che si adatta sia per il forecasting che per la rilevazione anomalie.
+🧪 Risultati Sperimentali
+• MARINA è stato testato su benchmark noti per forecasting e anomaly detection.
+• Ha raggiunto performance superiori ai modelli SOTA in entrambi i task.
+• Offre un compromesso ottimale tra accuratezza e efficienza computazionale.
+✅ Rilevanza per la SLRAspettoValutazioneDettagliTask Supportati✅ Forecasting + Anomaly DetectionÈ uno dei pochi modelli progettati per entrambi.Approccio Architetturale✅ MLP + AttentionLeggero, interpretabile, adatto a real-time.Dipendenze temporali e spaziali✅La combinazione MLP-Attention le cattura simultaneamente.Flessibilità d’uso✅ AltaAdattabile a più scenari applicativi: IT, IoT, industria.
+🔚 Conclusione
+MARINA è un modello solido, semplice ma potente, per:
+• ambienti real-time con elevate richieste di performance,
+• scenari misti (forecasting + anomaly detection),
+• domini multivariati con dinamiche complesse e rumore.
+🧩 Perfetto per essere incluso in una tabella riassuntiva ""modelli leggeri e generalisti"", con focus su versatilità architetturale ed efficienza.",,,,,,,
+Sparse graph learning from spatiotemporal time series,2023,"RQ1, RQ2, RQ3, RQ4","🧾 Contesto e Motivazione
+Le Graph Neural Networks (GNNs) si sono dimostrate estremamente efficaci nell’analisi di serie temporali spazio-temporali, sfruttando relazioni strutturate (ad es. tra sensori, aree geografiche, asset industriali) per migliorare le previsioni. Tuttavia, in molti casi il grafo che descrive tali relazioni non è noto, rendendo difficile sfruttare appieno il potenziale delle GNN.
+💡 Contributo Principale
+Gli autori propongono un metodo probabilistico score-based per apprendere automaticamente il grafo relazionale:
+• Modellando le dipendenze tra variabili come distribuzioni su spazi di grafi,
+• Ottimizzando end-to-end le prestazioni del modello sul task di forecasting.
+🔧 Caratteristiche TecnicheComponenteDescrizioneScore-based LearningApprendimento basato su gradienti Monte Carlo (score function estimator).Variance ReductionUso di tecniche consolidate per la riduzione della varianza, migliorando la stabilità dell’addestramento.Controllo della SparsitàIl framework include meccanismi per regolare la densità del grafo appreso.CompatibilitàPuò essere utilizzato come modulo stand-alone o integrato in modelli GNN di forecasting.
+🧪 Risultati Sperimentali
+• Valutato su dataset sintetici e reali.
+• Il grafo appreso migliora significativamente le prestazioni di modelli GNN-based.
+• La metodologia è scalabile e controllabile, adatta a contesti reali (es. urban sensing, reti IoT).",,,,,,,
+DRFormer: Multi-Scale Transformer Utilizing Diverse Receptive Fields for Long Time-Series Forecasting,2024,"RQ1, RQ2, RQ3, RQ4","🧾 Contesto
+Il Long-Term Time Series Forecasting (LTSF) è cruciale in molteplici settori applicativi come finanza, traffico urbano, gestione energetica. I recenti modelli Transformer basati su patch si sono rivelati promettenti, ma presentano due criticità principali:
+• Dipendono da lunghezze di patch predefinite, richiedendo conoscenza esperta per la selezione;
+• Faticano a modellare efficacemente la variabilità multi-scala tipica delle serie temporali reali.
+💡 Contributo Principale
+Gli autori propongono DRFormer, un Transformer con:
+1. Tokenizer dinamico: segmenta dinamicamente le sequenze per adattarsi alla scala temporale locale;
+2. Dynamic Sparse Learning: apprende pattern sparsi e campi ricettivi a scala variabile;
+3. Multi-Scale Sequence Extraction: per estrarre feature a più risoluzioni;
+4. Group-Aware Rotary Positional Encoding: migliora la consapevolezza delle posizioni sia all’interno che tra i gruppi di patch su scale diverse.
+🔧 Componenti TecnicheComponenteDescrizione🧩 Tokenizer dinamicoCostruisce rappresentazioni localmente adattive invece di usare patch fissi.🔄 Sparse learning dinamicoMigliora l’efficienza, riduce l’overfitting e si adatta alla struttura dei dati.🧭 Group-Aware Rotary PEAumenta la precisione nel tenere conto delle posizioni relative e assolute nei dati multi-scala.🧱 Architettura multi-scalaIntegra più livelli per cogliere pattern a breve, medio e lungo termine.
+📊 Risultati
+• Testato su dataset reali multivariati in domini diversi;
+• Supera i principali modelli Transformer (es. PatchTST, Informer, Autoformer);
+• Dimostra robustezza cross-dominio e migliore accuratezza nelle previsioni LTSF.",,,,,,,

@@ -1,0 +1,94 @@
+﻿Title,Anno,RQ,Descrizione abstract,Metodo,Tipo di dati,Tecnica per missing,Tecnica per eterogeneità,Risultati principali,Review Status,Link
+https://ieeexplore.ieee.org/document/10889198/,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta il problema del Variable Subset Forecasting (VSF), cioè situazioni in cui alcune variabili sono disponibili durante l’addestramento ma assenti in fase di previsione. Il metodo proposto si integra con architetture di attenzione variabile (es. attention per ogni feature) e introduce due innovazioni principali:
+1. Un meccanismo di attenzione arricchito con contesto globale, che consente al modello di mantenere una visione d’insieme dei dati anche se parziali.
+2. Un meccanismo di gruppi casuali durante il training, che simula scenari di dati mancanti per aumentare la robustezza del modello.
+I risultati sperimentali mostrano miglioramenti significativi delle prestazioni (fino al +40%) in scenari difficili con forte assenza di variabili, e l’aumento del costo computazionale è minimo (+1%).",,,,,,,
+https://ieeexplore.ieee.org/document/11002729/,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta una criticità concreta delle Spatial-Temporal Graph Neural Networks (STGNNs) nella previsione di serie temporali multivariate: la loro assunzione di completezza del dato. In contesti reali, come in caso di disastri naturali, i dati mancanti (derivanti da sensori guasti o assenti) compromettono sia la predizione sia la capacità di modellare correttamente le correlazioni spaziali.
+Per superare questi limiti, gli autori propongono due innovazioni:
+1. Interpolation Attention: sfrutta i valori osservati per ricostruire le variabili mancanti.
+2. Adaptive Graph Convolution: corregge dinamicamente le relazioni spaziali compromesse.
+Questi meccanismi sostituiscono i layer fully-connected nelle unità ricorsive, dando origine al modello GinAR, progettato per effettuare forecasting in modo end-to-end correggendo iterativamente le distorsioni spaziali causate dai dati assenti.
+Inoltre, propongono GinAR+, una variante potenziata mediante contrastive learning, dove coppie di dati con diversi tassi di missing sono usate per migliorare la robustezza del modello rispetto alla variabilità della qualità del dato. Gli esperimenti dimostrano l’efficacia e la superiorità della proposta.",,,,,,,
+Dynamic Graph Convolutional Networks with Spatiotemporal Missing Pattern Awareness,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta direttamente il problema della previsione di serie temporali multivariate con dati mancanti (MTSFMV), evidenziando una lacuna nei modelli precedenti: la maggior parte assume pattern di missing statici, mentre nella realtà essi variano nel tempo e nello spazio.
+Per superare questo limite, gli autori propongono STMPANets, una nuova architettura che:
+1. Decompone la serie in componenti stagionali e di trend, per evidenziare la struttura intrinseca della sequenza e adattarsi meglio ai pattern mancanti.
+2. Introduce un modulo temporale (MGCPT): un Multi-granularity Conditional Partial TCN che regola dinamicamente l’imputazione dei valori mancanti nel tempo, modellando la correlazione temporale.
+3. Introduce un modulo spaziale (ADGCN): un Adaptive Dynamic Graph Convolutional Network che percepisce e sfrutta pattern di missing dinamici nelle relazioni spaziali tra variabili.
+Il modello è stato testato su più dataset e ha ottenuto prestazioni superiori rispetto ai modelli esistenti.",,,,,,,
+Multivariate Correlation Self-Distillation Transformer for Time Series Forecasting With Incomplete Data,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un framework robusto per la previsione di serie temporali multivariate incomplete, basato su Transformer e su un meccanismo di auto-distillazione delle correlazioni tra variabili. Il contributo principale consiste in:
+1. Una struttura a due stadi:
+    ◦ Stage 1: ricostruzione della serie storica (con dati mancanti);
+    ◦ Stage 2: previsione della serie futura (extrapolazione).
+2. Un nuovo Multivariate Correlation Transformer, che sfrutta sia:
+    ◦ le relazioni tra variabili (inter-variate),
+    ◦ sia le dipendenze temporali univariate (intra-variate).
+3. Un meccanismo di auto-distillazione delle correlazioni: la conoscenza delle relazioni tra variabili appresa nello stage di previsione viene trasferita allo stage di ricostruzione, migliorando la capacità di ricostruire le serie incomplete.
+Il modello è stato validato su otto dataset reali, e i risultati sia qualitativi che quantitativi mostrano buone prestazioni.",,,,,,,
+Deep Learning for Non-stationary Multivariate Time Series Forecasting,2019,"RQ2, RQ3, RQ4","L’articolo esplora l’uso di Gated Recurrent Units (GRU) per la previsione della disponibilità di parcheggi in tempo reale, trattando un problema di forecasting di serie temporali multivariate in ambienti dinamici. I dati utilizzati provengono da stream eterogenei generati da sensori IoT installati in parcheggi diversi dell’Università di Essex. Le principali caratteristiche del problema affrontato includono:
+• Dati multivariati, prodotti in tempo reale;
+• Pattern stagionali complessi nella disponibilità dei parcheggi;
+• Uso di dati eterogenei da un numero limitato di dispositivi IoT;
+• Confronto tra GRU e MLP in termini di accuratezza nella previsione.
+Il modello GRU viene applicato per fornire predizioni della disponibilità futura in vari intervalli temporali, ma i risultati indicano che MLP semplici possono talvolta performare meglio dei GRU in questo contesto specifico.",,,,,,,
+Multimodal Time Series Forecasting for Online Oil Monitoring of Petrochemical Pelletizer Gearbox Using Multiscale Inverted Transform Network,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un nuovo modello chiamato MITN (Multiscale Inverted Transform Network) per la previsione di serie temporali multivariate complesse provenienti dal monitoraggio online dell’olio in ingranaggi industriali di impianti petrolchimici. Questo tipo di dati presenta sfide significative legate a:
+• Multimodalità (dati provenienti da sensori di umidità, viscosità, immagini, particelle metalliche),
+• Disturbi nel segnale,
+• Ampia estensione temporale.
+Il modello MITN combina:
+1. Analisi di correlazione multivariata per selezionare le variabili non lineari più rilevanti;
+2. Un modulo multiscala per catturare caratteristiche ridondanti e informative;
+3. Una struttura “inverted” che modella sia la dimensione temporale sia quella delle variabili;
+4. Un modulo multi-attention per cogliere le relazioni semantiche complesse tra variabili temporali;
+5. Layer normalization per migliorare stabilità e convergenza, gestendo la diversa distribuzione delle variabili.
+Il modello è stato validato su un set di dati reali di 5 anni (dal 2018 al 2023) provenienti da sensori industriali, e ha ottenuto errori di previsione inferiori rispetto a modelli noti come LSTM, GRU, TCN e Transformer. MITN mostra anche capacità di generalizzazione su variabili non osservate, il che lo rende adatto a scenari industriali complessi.",,,,,,,
+Cloud-Integrated Meteorological Parameter Prediction by Leveraging Multivariate Statistical Time Series and GANs,2025,"RQ1, RQ2, RQ3, RQ4","Questo studio si concentra sulla previsione di sei parametri meteorologici chiave (punto di rugiada, copertura nuvolosa, precipitazioni, temperatura, velocità e direzione del vento) per le città indiane di Bangalore e Delhi. I modelli utilizzati sono di tipo classico multivariato: VAR, VMA, VARMA e CVAR.
+Per far fronte alla presenza di dati mancanti, viene impiegato un modulo di imputazione basato su GANs (Generative Adversarial Networks). L’obiettivo è rendere il sistema scalabile e computazionalmente efficiente grazie all’uso di servizi cloud.
+I risultati evidenziano che il modello CVAR ottiene le migliori prestazioni rispetto agli altri, misurate con nMSE e nRMSE.",,,,,,,
+Joint Forecasting and Interpolation of Time-Varying Graph Signals Using Deep Learning,2020,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta il problema della previsione di snapshot di segnali su reti (es. sensori distribuiti), utilizzando solo un sottoinsieme di nodi osservati. Questo compito è formulato come una combinazione di:
+• Forecasting temporale multivariato (previsione nel tempo),
+• Interpolazione spaziale (previsione sui nodi non osservati nel grafo).
+Il metodo proposto combina:
+• Reti neurali ricorrenti (RNN) per la componente temporale,
+• Strumenti di analisi in frequenza da Graph Signal Processing (GSP) per la componente spaziale, assumendo una certa regolarità/smoothness dei segnali nel grafo.
+I risultati su due dataset reali (temperature negli USA e flusso di traffico a Seattle) mostrano che:
+• Il modello supera tecniche deep learning standard, soprattutto in scenari con osservazioni parziali,
+• È robusto al rumore e ai dati mancanti.",,,,,,,
+Heterogeneous Federated Semantic Communication for Time Series Forecasting,2024,"RQ1, RQ2, RQ3, RQ4","L’articolo propone una nuova architettura per la previsione di serie temporali multivariate in ambienti edge eterogenei, chiamata SC-FedAda (Semantic Communication–Federated Adaptive Learning). Il contesto è quello di federated learning distribuito, in cui:
+• I client sono eterogenei per capacità computazionali e disponibilità di risorse,
+• Le comunicazioni avvengono su canali wireless (con rumore e limitazioni di banda),
+• Il compito finale è il forecasting MTSF, usando un’architettura semantically aware.
+La struttura proposta:
+• Utilizza semantic encoder basati su Patch-wise Attention Module (PAM) e federated adapter, che codificano informazioni semanticamente rilevanti da trasmettere;
+• Introduce un meccanismo di self-distillation per la condivisione di conoscenza cross-client e cross-layer;
+• Al server edge, i segnali semantici sono decodificati e processati per la previsione finale.
+I risultati su tre dataset noti di serie temporali mostrano che SC-FedAda supera quattro architetture SOTA di federated learning, soprattutto in scenari a basso rapporto segnale/rumore (SNR).",,,,,,,
+Multivariate Financial Time-Series Prediction With Certified Robustness,2020,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un metodo di previsione per serie temporali finanziarie multivariate, focalizzato in particolare sul mercato dei futures agricoli, un dominio caratterizzato da:
+• Multimodalità (dati di prezzo + dati esterni),
+• Non stazionarietà,
+• Rumore e instabilità nel dato,
+• Esigenza di modellare sia le dinamiche a breve che a lungo termine.
+Il modello proposto combina:
+1. Un Multimodal Variational Autoencoder (MVAE) per l’estrazione di feature profonde e condivise tra modalità diverse;
+2. Una rete neurale ricorrente Long- and Short-Term RNN per la previsione;
+3. Un meccanismo di noise injection certificato (ispirato alla differential privacy) per aumentare la robustezza e generalizzazione del modello.
+I risultati empirici su dati reali di futures agricoli e dati esterni dimostrano che il modello supera diversi metodi di baseline in accuratezza.",,,,,,,
+Forecasting Server Resource Utilization: An Experimental Study with Long Short-Term Memory Model,2024,"RQ1, RQ2, RQ3, RQ4","Questo studio propone un modello per la previsione di crash server e utilizzo delle risorse in ambienti di cloud computing, attraverso tecniche di forecasting di serie temporali multivariate (es. CPU usage, memoria libera, spazio su disco). Il modello sfrutta:
+• LSTM (Long Short-Term Memory) per catturare dinamiche temporali complesse;
+• Un approccio di Adaptive Transfer Learning, che consente di adattare il modello a nuovi domini o ambienti in modo flessibile.
+Particolare attenzione viene posta a:
+• Dati mancanti,
+• Tendenze dinamiche e variabili nel tempo nell’utilizzo delle risorse.
+Gli esperimenti dimostrano che l’approccio migliora significativamente la precisione predittiva, contribuendo a una migliore gestione preventiva dei crash e a un monitoraggio più efficiente delle risorse.\",,,,,,,
+Key Factor Selection Transformer for Multivariate Time Series Forecasting,2022,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un nuovo modello chiamato Key Factor Selection Transformer (KFST) per affrontare la previsione di serie temporali multivariate (MTSF) in contesti ad alta dimensionalità e con forte complessità temporale. Il problema affrontato è la difficoltà, nei modelli precedenti, di identificare in modo efficiente i fattori rilevanti e le loro variazioni temporali.
+Il modello KFST introduce tre elementi chiave:
+1. Meccanismo a due stadi per la selezione dei fattori chiave, basato su:
+    ◦ Rete di selezione variabili (Variable Selection Network)
+    ◦ Prob-sparse self-attention (per concentrare l’attenzione sui segnali rilevanti)
+2. Integrazione di GRU e self-attention, per apprendere efficacemente correlazioni locali e di lungo periodo nei dati storici.
+3. Una nuova funzione obiettivo che guida l’apprendimento della variazione temporale dei fattori.
+I risultati su quattro dataset reali mostrano miglioramenti significativi nella performance di previsione rispetto a modelli esistenti.",,,,,,,
+High-dimensional Multivariate Time Series Forecasting using Self-Organizing Maps and Fuzzy Time Series,2021,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un metodo per la previsione di serie temporali multivariate basato sull’approccio Fuzzy Time Series (FTS), noto per la sua semplicità, accuratezza e capacità non-parametrica. Tuttavia, i modelli FTS multivariati soffrono di un'esplosione del numero di regole quando il numero di variabili cresce (problema di scalabilità in ambienti ad alta dimensionalità).
+Per affrontare questa criticità, il lavoro propone una metodologia composta da due fasi:
+1. Riduzione dimensionale tramite Self-Organizing Maps (SOM) di Kohonen, che proiettano i dati multivariati in uno spazio latente a bassa dimensionalità;
+2. Applicazione del metodo Weighted Multivariate FTS (WMVFTS) sui dati trasformati per l’estrazione delle regole fuzzy e la previsione.
+I risultati mostrano buone prestazioni in termini di RMSE e MAPE, evidenziando il potenziale del metodo anche in contesti ad alta dimensionalità.",,,,,,,

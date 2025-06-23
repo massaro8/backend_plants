@@ -1,0 +1,124 @@
+﻿Title,Anno,RQ,Descrizione abstract,Metodo,Tipo di dati,Tecnica per missing,Tecnica per eterogeneità,Risultati principali,Review Status,Link
+A multiscale model for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo propone un nuovo modello chiamato MultiPatchFormer, una variante dei Transformer progettata per la previsione di serie temporali multivariate. Vengono affrontate due criticità dei modelli Transformer standard:
+1. L’incapacità di modellare diverse granularità temporali (multi-scale),
+2. L’ignoranza delle correlazioni tra serie diverse (inter-series correlations), che può compromettere l’accuratezza.
+Per risolvere questi problemi, il modello introduce due componenti principali:
+• Multi-scale patch-wise temporal modeling: i dati temporali vengono segmentati in patch di diverse risoluzioni, permettendo di catturare correlazioni temporali su più scale.
+• Channel-wise encoder: modellizza le interazioni tra le diverse serie (i “canali”) per tenere conto della dipendenza multivariata.
+Infine, viene utilizzato un decoder lineare multi-step, progettato per mitigare l’overfitting e ridurre gli effetti del rumore. Il modello è valutato su sette dataset reali, superando i modelli baseline in termini di metriche di errore e generalizzabilità.",,,,,,,
+MFFCNN: multi-scale fractional Fourier transform convolutional neural network for multivariate time series forecasting,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo presenta MFFCNN (Multi-Scale Fractional Fourier Transform Convolutional Neural Network), un nuovo modello progettato per affrontare le sfide della previsione di serie temporali multivariate (MTSF), in particolare per:
+1. Catturare pattern periodici complessi;
+2. Trovare un equilibrio tra prestazioni ed efficienza computazionale;
+3. Superare i limiti dei modelli basati su Fourier transform (FT), che hanno una visione unidimensionale della periodicità.
+Elementi chiave della proposta:
+• FrFT (Fractional Fourier Transform): estensione del FT che consente di estrarre pattern periodici da più prospettive (angoli di rotazione), adattandosi meglio alla complessità dei dati reali.
+• Multi-scale adaptive patches: i dati vengono suddivisi in patch adattivi, in base alla granularità dei segnali.
+• 2D Convolution: usata per modellare relazioni intra- e inter-serie da una prospettiva multiscala.
+• Il modello è testato su 10 dataset benchmark, ottenendo risultati superiori a 7 modelli SOTA.",,,,,,,
+MSDformer: an autocorrelation transformer with multiscale decomposition for long-term multivariate time series forecasting,2024,"RQ1, RQ2, RQ3, RQ4","L’articolo presenta MSDformer (Multiscale Decomposition Transformer), un nuovo modello per la previsione a lungo termine di serie temporali multivariate (MTSF), con l’obiettivo di migliorare prestazioni ed efficienza — due aspetti fondamentali nelle applicazioni reali.
+Le principali componenti introdotte:
+• MSDecomp (Multiscale Decomposition module): segmenta la serie temporale in pattern ricorrenti su più scale temporali, permettendo di preservare dettagli storici e identificare componenti di trend.
+• Encoder con Auto-Correlation: utilizza un meccanismo di autocorrelazione per scoprire similitudini tra sottosequenze periodiche, migliorando la ricostruzione dei dettagli e la cattura delle componenti stagionali.
+• Decoder autoregressivo: al posto del classico decoder Transformer, viene utilizzato un modulo autoregressivo, che riduce la complessità strutturale e migliora la modellazione dell’informazione lineare.
+Risultati:
+• Testato su sei dataset reali;
+• Performance media migliorata dell’8.1% rispetto a modelli avanzati esistenti;
+• Ridotto consumo di memoria e tempo di calcolo, rendendolo adatto a forecast di lungo periodo.",,,,,,,
+Adapting to the stream: an instance-attention GNN method for irregular multivariate time series data,2025,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta una sfida molto rilevante nel contesto delle serie temporali multivariate: la presenza di dati irregolari, disallineati e con valori mancanti, dovuti ad esempio a guasti nei sensori.
+Principali contributi del lavoro:
+• Il problema centrale è la gestione di IMTS (Irregular Multivariate Time Series), per cui i metodi tradizionali fanno fatica.
+• I modelli GNN esistenti richiedono una struttura di grafo affidabile, che spesso non è disponibile o richiede una stima futura non praticabile in scenari di streaming.
+• Il modello proposto è una Dynamic GNN con:
+    ◦ Instance-attention mechanism che apprende e aggiorna dinamicamente i pesi degli archi del grafo,
+    ◦ Capacità di adattarsi in tempo reale ai flussi di dati.
+• Strategie differenziate per dati ad alta e bassa frequenza, migliorando la precisione nella previsione.
+• Validazione su dataset reali, in cui il modello mostra superiorità sia nella classificazione sia nell’imputazione.",,,,,,,
+TCLN: A Transformer-based Conv-LSTM network for multivariate time series forecasting,2023,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta il limite dei modelli tradizionali nel cogliere caratteristiche spaziali e spaziotemporali tra variabili in serie temporali multivariate, proponendo un modello ibrido che combina più architetture:
+Architettura proposta:
+• Multi-kernel CNN: usata in input per estrarre feature spaziali tra le variabili.
+• Encoder composto da Transformer e LSTM:
+    ◦ Transformer encoder → per relazioni globali e pattern a lungo termine;
+    ◦ LSTM → per pattern sequenziali locali e per migliorare la cattura delle dipendenze temporali.
+• Decoder: composto da funzione ReLU + Linear layer.
+• Autoregressive component: integrato per migliorare la robustezza e generalizzazione.
+Risultati:
+• Il modello è valutato su quattro dataset (tra cui uno privato, TIOB).
+• Ottiene migliori performance rispetto ai benchmark, anche su forecasting a lungo termine.",,,,,,,
+Enhancing Multivariate Time Series Forecasting: A Novel Approach with Mallows Model Averaging and Graph Neural Networks,2024,"RQ1, RQ2, RQ3, RQ4","Questo studio propone un approccio innovativo basato su grafi e model averaging per affrontare la complessità delle relazioni non lineari e delle feature di ordine superiore tipiche delle serie temporali multivariate.
+Principali componenti del modello IGMMA:
+• Model averaging instance-wise: si usano più modelli lineari candidati, i cui output vengono pesati dinamicamente per creare un layer lineare finale.
+• Mallows loss function: la funzione obiettivo è modificata secondo il criterio di Mallows, introducendo penalizzazioni separate sui parametri dei modelli e sui pesi dell’averaging.
+• Framework GNN-based: l’intera architettura è costruita all’interno di una rete neurale basata su grafi, che sfrutta le relazioni strutturate tra le variabili.
+• Applicazione pratica alla previsione dei prezzi futuri di beni multi-merce (multicommodity futures forecasting).
+• Risultati empirici: migliori prestazioni predittive rispetto ai baseline, anche usando reti neurali di piccole dimensioni → efficienza e riduzione dei parametri.",,,,,,,
+RSMformer: an efficient multiscale transformer-based framework for long sequence time-series forecasting,2024,"RQ1, RQ2, RQ3, RQ4","Il lavoro propone RSMformer, un modello Transformer innovativo progettato per affrontare le principali limitazioni del Long Sequence Time-Series Forecasting (LSTF):
+Problemi evidenziati nei modelli Transformer esistenti:
+1. Utilizzo di una singola scala temporale, che limita la capacità di catturare dinamiche multiscala.
+2. Complessità computazionale quadratica dell’attenzione completa (self-attention).
+3. Elevato consumo di memoria, che ostacola l’efficienza nel forecasting a lungo termine.
+Soluzioni proposte dal modello RSMformer:
+• Residual Sparse Attention (RSA):
+    ◦ Riduce la complessità da quadratica a L log L, selezionando query dominanti secondo un criterio di sparsità dell’attenzione.
+• Strategia di previsione multiscala:
+    ◦ Utilizza tecniche di up/down-sampling e centralizzazione cross-scala per affinare iterativamente la previsione a vari livelli temporali.
+    ◦ Permette di catturare dipendenze temporali a diverse scale.
+• Validazione su sei dataset pubblici, con performance significativamente superiori rispetto ai modelli benchmark SOTA.",,,,,,,
+VTformer: a novel multiscale linear transformer forecaster with variate-temporal dependency for multivariate time series,2024,"RQ1, RQ2, RQ3, RQ4","Il lavoro si inserisce nel dibattito attuale sull’efficacia dei Transformer rispetto ai modelli lineari nelle applicazioni di MTSF, e propone VTformer, un modello Transformer leggero ed efficiente, progettato per superare limiti noti:
+Problemi identificati nei Transformer tradizionali:
+1. Sottoutilizzo dell'informazione disponibile, con priorità eccessiva alle dipendenze globali temporali;
+2. Scarsa attenzione alle correlazioni tra variabili multivariate, che risultano cruciali nei dati MTS.
+Soluzioni proposte in VTformer:
+• Multiscale linear attention:
+    ◦ Combina l’efficienza della linear attention con la capacità di analisi su diverse scale temporali;
+    ◦ Cattura in parallelo le dipendenze a lungo termine e le correlazioni tra variabili.
+• Adaptive fusion module:
+    ◦ Propaga informazioni complementari tra dimensione temporale e variabile;
+    ◦ Migliora la sinergia tra struttura dei dati e attenzione.
+• Validazione su otto dataset reali, con risultati migliori rispetto ai modelli SOTA in task di long-term MTS forecasting.",,,,,,,
+An embedding-based non-stationary fuzzy time series method for multiple output high-dimensional multivariate time series forecasting in IoT applications,2022,"RQ1, RQ2, RQ3, RQ4","L’articolo si concentra su un contesto molto rilevante: IoT e serie temporali ad alta dimensionalità, affette da non stazionarietà e concetto di drift — problemi comuni ma spesso trascurati nella letteratura.
+Elementi chiave del metodo proposto:
+• MO-ENSFTS è un modello fuzzy time series (FTS):
+    ◦ Multivariate MIMO (Multiple Input, Multiple Output);
+    ◦ Non stazionario, adatto a concept drift nei dati temporali;
+    ◦ Include una trasformazione di embedding dei dati per gestire alta dimensionalità e relazioni tra variabili.
+• Il modello è data-driven, flessibile e più parsimonioso rispetto ai modelli deep learning.
+• È stato testato su quattro dataset reali IoT ad alta dimensionalità.
+• I risultati sperimentali mostrano che MO-ENSFTS supera RNN, Random Forest e SVR, risultando più efficiente in termini computazionali e meno complesso dei modelli neurali profondi.",,,,,,,
+Graph convolutional networks for traffic forecasting with missing values,2022,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta un problema centrale e spesso trascurato: la previsione del traffico in presenza di valori mancanti complessi nei dati spazio-temporali raccolti da sensori.
+Sfide affrontate:
+• I missing values nei dati di traffico si verificano in modo:
+    ◦ Casuale o consecutivo nel tempo;
+    ◦ Localizzato o simultaneo su più sensori nello spazio.
+• Le tecniche classiche di imputazione sono inadeguate in questo contesto ad alta complessità.
+Soluzione proposta: GCN-M
+• Basato su Graph Convolutional Networks, ma con nuove capacità:
+    ◦ Joint modeling di previsione e gestione dei missing values, in un’unica rete.
+    ◦ Uso di una memory network con attenzione, che cattura pattern storici globali e feature locali spazio-temporali.
+    ◦ Introduzione di un modulo di apprendimento dinamico del grafo, che aggiorna la struttura in base a feature apprese.
+Risultati:
+• Il modello è testato su dataset reali di traffico;
+• Dimostra affidabilità e robustezza nel gestire situazioni realistiche di missing complessi e forecasting con struttura spazio-temporale.",,,,,,,
+CrossGFA: wind power prediction with a multi-scale cross-graph network via a Frequency-Enhanced Channel attention mechanism,2024,"RQ1, RQ2, RQ3, RQ4","L’articolo propone CrossGFA, un modello GNN avanzato progettato per affrontare le complessità dei dati di produzione eolica, noti per essere:
+• Non periodici e non stazionari;
+• Rumorosi e ad alta frequenza di campionamento;
+• Difficili da modellare con tecniche convenzionali di forecasting.
+Soluzioni tecniche proposte:
+1. Cross-scale GNN: cattura le tendenze multiscala nella serie temporale, migliorando la capacità di adattarsi alla non stazionarietà.
+2. Cross-variable GNN: esplora relazioni tra variabili sia omogenee che eterogenee, migliorando la modellazione multivariata.
+3. Frequency-Enhanced Channel Attention: meccanismo di attenzione sui canali, potenziato nella riduzione del rumore in dominio di frequenza, complementando l’architettura GNN.
+Risultati:
+• Testato su quattro dataset reali di stazioni eoliche;
+• Supera i modelli SOTA in termini di accuratezza predittiva;
+• Dimostra efficacia nel gestire non stazionarietà, variabilità multivariata e rumore.",,,,,,,
+Partial transfer learning network for data imputation and soft sensor under various operation conditions,2023,"RQ1, RQ2, RQ3, RQ4","L’articolo affronta due problemi critici nei processi industriali reali:
+1. Distribuzioni diverse tra training e test set (source vs. target domain) causate dal cambio di condizioni operative;
+2. Valori mancanti nei dati dovuti a malfunzionamenti dei sensori.
+Soluzioni proposte in PTL-Net:
+• Modulo di imputazione + soft sensor model:
+    ◦ Applicato sul source domain, con una compactness loss che riduce l’influenza delle feature anomale derivanti da valori imputati.
+• Strategia di transfer learning parziale:
+    ◦ Riduce la discrepanza di distribuzione tra dominio sorgente e target;
+    ◦ Trasferisce solo le componenti condivise, evitando l’errore di adattamento (model mismatch).
+• Validazione su due casi reali:
+    ◦ Nuclear dataset
+    ◦ Three-phase flow process",,,,,,,
